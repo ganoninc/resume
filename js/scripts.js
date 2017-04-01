@@ -23,7 +23,7 @@
 
         e.preventDefault();
         var heading = $(this).attr('href');
-        var scrollDistance = $(heading).offset().top;
+        var scrollDistance = $(heading).offset().top - 62;
 
         $('html, body').animate({
             scrollTop: scrollDistance + 'px'
@@ -87,10 +87,10 @@
     });
 
     $(window).scroll(function () {//Au scroll dans la fenetre on déclenche la fonction
-        if ($(this).scrollTop() > 600) { //si on a défilé de plus de 100px du haut vers le bas
-            $('header').addClass("sticky"); //on ajoute la classe "fixe" au header
+        if ($(this).scrollTop() > 25) { //si on a défilé de plus de 100px du haut vers le bas
+            $('header').addClass("translucent"); //on ajoute la classe "fixe" au header
         } else {
-            $('header').removeClass("sticky");//sinon on retire la classe "fixe" (c'est pour laisser le header à son endroit de départ lors de la remontée
+            $('header').removeClass("translucent");//sinon on retire la classe "fixe" (c'est pour laisser le header à son endroit de départ lors de la remontée
         }
     });
 
