@@ -44,7 +44,7 @@
 
     // Scroll to first element
     $('#lead-down span').click(function() {
-        var scrollDistance = $('#lead').next().offset().top;
+        var scrollDistance = $('#lead').next().offset().top - 62;
         $('html, body').animate({
             scrollTop: scrollDistance + 'px'
         }, 1250);
