@@ -151,6 +151,7 @@ header {
     animation-iteration-count: 1;
     animation-timing-function: ease;
     animation-duration: 0.75s;
+    transition: background 0.25s;
 
     ul {
         display: inline-block;
@@ -167,6 +168,10 @@ header {
         -webkit-backdrop-filter: saturate(180%) blur(20px);
         backdrop-filter: saturate(180%) blur(20px);
         background-color: rgba(255, 255, 255, 0.80);
+    }
+
+    &:hover {
+        background-color: white;
     }
 
     li {
