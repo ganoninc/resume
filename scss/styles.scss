@@ -165,13 +165,9 @@ header {
     }
 
     &.translucent ul {
-        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        -webkit-backdrop-filter: saturate(200%) blur(25px);
         backdrop-filter: saturate(180%) blur(20px);
-        background-color: rgba(255, 255, 255, 0.80);
-    }
-
-    &:hover {
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.75);
     }
 
     li {

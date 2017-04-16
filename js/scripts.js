@@ -86,12 +86,14 @@
         $('header, body').removeClass('active');
     });
 
-    // $(window).scroll(function () {//Au scroll dans la fenetre on déclenche la fonction
-    //     if ($(this).scrollTop() > 25) { //si on a défilé de plus de 100px du haut vers le bas
-    //         $('header').addClass("translucent"); //on ajoute la classe "fixe" au header
-    //     } else {
-    //         $('header').removeClass("translucent");//sinon on retire la classe "fixe" (c'est pour laisser le header à son endroit de départ lors de la remontée
-    //     }
-    // });
+    var isSafari = navigator.userAgent.match(/AppleWebKit/) && ! navigator.userAgent.match(/Chrome/);
+
+    $(window).scroll(function () {//Au scroll dans la fenetre on déclenche la fonction
+        if ($(this).scrollTop() > 25 && isSafari) { //si on a défilé de plus de 100px du haut vers le bas
+            $('header').addClass("translucent"); //on ajoute la classe "fixe" au header
+        } else if(isSafari){
+            $('header').removeClass("translucent");//sinon on retire la classe "fixe" (c'est pour laisser le header à son endroit de départ lors de la remontée
+        }
+    });
 
 })(jQuery);
