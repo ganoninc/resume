@@ -397,12 +397,14 @@ footer {
 */
 
 #lead {
-
-
-// html
-//   height: 100%
-//   background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%)
-//   overflow: hidden
+    position: relative;
+    height: 100vh;
+    min-height: 500px;
+    max-height: 1080px;
+    background-color:black;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    padding: 15px;
+    overflow: hidden;
     
     #stars{
         width: 1px;
@@ -457,27 +459,6 @@ footer {
             box-shadow: $shadows-big;
         }
     }
-
-// #title
-//   position: absolute
-//   top: 50%
-//   left: 0
-//   right: 0
-  
-//   color: #FFF
-//   text-align: center
-//   font-family: 'lato',sans-serif
-//   font-weight: 300
-//   font-size: 50px
-//   letter-spacing: 10px
-  
-//   margin-top: -60px
-//   padding-left: 10px
-  
-  // span
-  //   background: -webkit-linear-gradient(white, #38495a)
-  //   -webkit-background-clip: text
-  //   -webkit-text-fill-color: transparent
     
     @keyframes animStar{
         from{
@@ -487,17 +468,6 @@ footer {
             transform: translateY(-2000px);
         }
     }
-
-    position: relative;
-    height: 100vh;
-    min-height: 500px;
-    max-height: 1080px;
-    //background: url(../images/lead-bg-space.jpg);
-    //background-size: cover;
-    background-color:black;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-    padding: 15px;
-    overflow: hidden;
 }
 
 #lead-content {
