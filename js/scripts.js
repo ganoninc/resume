@@ -90,12 +90,14 @@
 
     $(window).scroll(function () {//Au scroll dans la fenetre on déclenche la fonction
         if ($(this).scrollTop() > 125) { 
+            $('#menu').addClass("shadow"); 
             if(isSafari){
                 $('header').addClass("translucent"); 
             }
             else
                 $('header').addClass("opaque");
         } else{
+            $('#menu').removeClass("shadow"); 
             if(isSafari)
                 $('header').removeClass("translucent"); 
             else
