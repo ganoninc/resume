@@ -89,10 +89,17 @@
     var isSafari = navigator.userAgent.match(/AppleWebKit/) && ! navigator.userAgent.match(/Chrome/);
 
     $(window).scroll(function () {//Au scroll dans la fenetre on déclenche la fonction
-        if ($(this).scrollTop() > 25 && isSafari) { //si on a défilé de plus de 100px du haut vers le bas
-            $('header').addClass("translucent"); //on ajoute la classe "fixe" au header
-        } else if(isSafari){
-            $('header').removeClass("translucent");//sinon on retire la classe "fixe" (c'est pour laisser le header à son endroit de départ lors de la remontée
+        if ($(this).scrollTop() > 125) { 
+            if(isSafari){
+                $('header').addClass("translucent"); 
+            }
+            else
+                $('header').addClass("opaque");
+        } else{
+            if(isSafari)
+                $('header').removeClass("translucent"); 
+            else
+                $('header').removeClass("opaque");
         }
     });
 
