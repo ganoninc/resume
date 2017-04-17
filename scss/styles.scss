@@ -198,7 +198,10 @@ header {
             text-decoration: none;
         }
 
-        &.currentSelection{
+    }
+
+    .active{
+        a {
             color: $base-color-hover;
             text-decoration: none;
             background: #eee;
