@@ -897,12 +897,25 @@ footer {
     li {
         display: inline-block;
         margin: 7px;
-        padding: 5px 10px;
+        padding: 6px 12px;
         color: $heading;
         background: darken($background-alt, 5%);
         list-style: none;
         cursor: default;
-        font-size: 1.2em;
+        font-size: 1.0em;
+        opacity:0.9;
+
+        &.main-skill{
+            font-size: 1.55em;
+            padding: 8px 16px;
+            opacity:1;
+        }
+
+        &.other-skill{
+            font-size: 0.7em;
+            padding: 3px 6px;
+            opacity:0.5;
+        }
     }
 }
 
