@@ -89,7 +89,7 @@
     var isSafari = navigator.userAgent.match(/AppleWebKit/) && ! navigator.userAgent.match(/Chrome/);
 
     $(window).scroll(function () {//Au scroll dans la fenetre on déclenche la fonction
-        if ($(this).scrollTop() > 25) { 
+        if ($(this).scrollTop() > 0) { 
             $('#menu').addClass("shadow"); 
             if(isSafari){
                 $('header').addClass("translucent"); 
