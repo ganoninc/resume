@@ -66,7 +66,7 @@ $shadows-big:    multiple-box-shadow(100);
 
 // infinite: animations On
 // 0: animations off
-$infinite-animation-switch: infinite;
+$infinite-animation-switch: 0;
 
 /*
     ---------------------
@@ -174,14 +174,9 @@ header {
 
     ul {
         display: inline-block;
-        //background: $background;
         text-align: center;
         padding: 10px;
         margin: 0;
-        //border-bottom-right-radius: 4px;
-        //border-bottom-left-radius: 4px;
-        border-bottom:1px solid white;
-        //width: 100%;
     }
 
     a {
@@ -189,6 +184,9 @@ header {
         color: $base-color;
         color: white;
         padding: 10px;
+        transition-property: all;
+        transition-duration: 0.25s;
+        transition-timing-function: ease;
 
         &:hover {
             color: $base-color-hover;
@@ -198,18 +196,36 @@ header {
         }
 
         &:focus {
-            color: $base-color;
+            color: white;
             text-decoration: none;
         }
 
+        &:visited{
+            color: white;
+            text-decoration: none;
+        }
     }
 
     .active{
         a {
-            color: $base-color-hover;
-            text-decoration: none;
-            background: #eee;
-            border-radius: 4px;
+            position: relative
+        }
+
+        a:after{
+            position: absolute;
+            content: '';
+            top: 100%;
+            height: 1px;
+            width: 50px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            background: $base-color;
+        }
+        
+        a:hover{
+            border-radius: 0px;
+            background:none;
         }
     }
 
@@ -569,16 +585,33 @@ footer {
 */
 
 #about {
-    padding: 75px 15px;
+    padding: 100px 15px;
     border-bottom: 1px solid $border;
+    text-align: center;
 
     h2 {
         color: $heading;
+        max-width: 600px;
+        font-size: 2.2em;
+        margin-bottom: 60px;
+
+        .highlight{
+            color: $base-color;
+        }
+    }
+
+    .heading:after{
+        content: none;
     }
 
     p {
+        display: block;
+        margin: auto;
+        max-width: 500px;
+        text-align: justify;
+        font-size: 1.2em;
         color: $text;
-        margin: 0;
+        line-height: 1.6em;
     }
 }
 
