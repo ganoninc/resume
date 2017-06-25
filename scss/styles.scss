@@ -850,6 +850,9 @@ footer {
         margin-bottom: 0px;
         color: #3498db;
         padding: 10px;
+        transition-property: all;
+        transition-duration: 0.25s;
+        transition-timing-function: ease;
     }
 
     a:hover {
