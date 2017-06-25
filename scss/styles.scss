@@ -64,6 +64,10 @@ $shadows-small:  multiple-box-shadow(700);
 $shadows-medium: multiple-box-shadow(200);
 $shadows-big:    multiple-box-shadow(100);
 
+// infinite: animations On
+// 0: animations off
+$infinite-animation-switch: infinite;
+
 /*
     ---------------------
     ----- 2. Mixins -----
@@ -416,7 +420,7 @@ footer {
         height: 1px;
         background: transparent;
         box-shadow: $shadows-small;
-        animation: animStar 50s linear infinite;
+        animation: animStar 50s linear $infinite-animation-switch;
 
         &:after{
             content: " ";
@@ -434,7 +438,7 @@ footer {
         height: 2px;
         background: transparent;
         box-shadow: $shadows-medium;
-        animation: animStar 100s linear infinite;
+        animation: animStar 100s linear $infinite-animation-switch;
 
         &:after{
             content: " ";
@@ -452,7 +456,7 @@ footer {
         height: 3px;
         background: transparent;
         box-shadow: $shadows-big;
-        animation: animStar 150s linear infinite;
+        animation: animStar 150s linear $infinite-animation-switch;
         
         &:after{
             content: " ";
@@ -539,7 +543,7 @@ footer {
 
     i {
         animation: pulsate 1.5s ease;
-        animation-iteration-count: infinite;
+        animation-iteration-count: $infinite-animation-switch;
         padding-top: 5px;;
     }
 }
