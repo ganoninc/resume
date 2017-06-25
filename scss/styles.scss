@@ -665,7 +665,7 @@ footer {
     margin-left: 350px;
     background: #fff;
     border: 1px solid #e6e6e6;
-    padding: 15px;
+    padding: 30px;
     border-radius: 3px;
     text-align: left;
 
@@ -693,7 +693,7 @@ footer {
     li {
         margin: 10px 0px;
         font-size: 0.90em;
-        color: #374054;
+        color: #616569;
     }
 }
 
@@ -1196,16 +1196,24 @@ footer {
 
     #lead-content {
         h1 {
-            font-size: 1.5em;
+            font-size: 2.5em;
         }
 
         h2 {
-            font-size: 1em;
+            font-size: 1.5em;
         }
 
         a {
             font-size: 0.9em;
-            padding: 5px 10px;
+        }
+    }
+
+    #experience{
+
+        .vtimeline-content{
+            ul{
+                padding-left:15px;
+            }
         }
     }
 
