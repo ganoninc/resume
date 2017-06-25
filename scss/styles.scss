@@ -820,46 +820,53 @@ footer {
     background: #fff;
     border-radius: 4px;
     border: 1px solid #e6e6e6;
-    padding: 15px;
+    padding: 30px;
 
     h3 {
-        font-size: 1.5em;
+        font-size: 1.6em;
         font-weight: 300;
         color: #374054;
         display: inline-block;
-        margin: 0;
+        display: block;
+        margin: auto;
+        width:80%;
     }
 
     .publication-authors {
         display: block;
-        margin: 15px;
+        margin: 30px;
         font-size: 0.80em;
         color: #6b6b6b;
     }
 
     .publication-publication {
+        display: block;
+        margin: auto;
         font-size: 1.1em;
         font-weight: 300;
         color: #7e8890;
-        margin: 0 0 15px 0;
+        max-width: 60%;
     }
 
     a {
         display: block;
-        margin: 10px;
-        margin-bottom: 0px;
+        margin: auto;
+        margin-top: 20px;
         color: #3498db;
         padding: 10px;
         transition-property: all;
         transition-duration: 0.25s;
         transition-timing-function: ease;
+        width: 40%;
+        text-decoration: none;
     }
 
     a:hover {
         color: #217dbb;
         text-decoration: none;
-        background: #eee;
+        //background: #eee;
         border-radius: 4px;
+        text-decoration: underline;
     }
 }
 
