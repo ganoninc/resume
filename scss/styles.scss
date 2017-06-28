@@ -666,9 +666,10 @@ footer {
     margin-left: 350px;
     background: #fff;
     border: 1px solid #e6e6e6;
-    padding: 30px;
+    padding: 20px 30px;
     border-radius: 3px;
     text-align: left;
+    max-width: 560px;
 
     h3 {
         font-size: 1.5em;
@@ -687,14 +688,19 @@ footer {
 
     p {
         color: $text;
-        font-size: 0.9em;
+        font-size: 1em;
+        line-height: 1.6em;
         margin: 0;
+        text-align: justify;
     }
 
     li {
         margin: 10px 0px;
-        font-size: 0.90em;
-        color: #616569;
+        font-size: 1em;
+        line-height: 1.5em;
+        color: $text;
+        max-width: 430px;
+        text-align: justify;
     }
 }
 
