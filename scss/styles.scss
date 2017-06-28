@@ -856,7 +856,7 @@ footer {
     }
 
     a {
-        display: block;
+        display: inline-block;
         margin: auto;
         margin-top: 20px;
         color: #3498db;
@@ -864,7 +864,6 @@ footer {
         transition-property: all;
         transition-duration: 0.25s;
         transition-timing-function: ease;
-        width: 40%;
         text-decoration: none;
     }
 
@@ -962,7 +961,7 @@ footer {
         opacity:0.9;
 
         &.main-skill{
-            font-size: 1.55em;
+            font-size: 1.4em;
             padding: 8px 16px;
             opacity:1;
         }
@@ -1103,8 +1102,42 @@ footer {
     #about {
         text-align: center;
 
+        .heading{
+            font-size: 2em;
+        }
+
         p {
+            text-align: justify;
+            font-size: 1.1em;
+        }
+    }
+
+    .vtimeline-content{
+        padding: 20px;
+
+        p {
+            font-size: 0.9em;
+        }
+
+        li {
+            font-size: 0.9em;
             text-align: left;
+        }
+    }
+
+    #publications {
+
+        .publication-block{
+
+            h3 {
+                font-size: 1.4em;
+                width:auto;
+            }
+
+            .publication-publication {
+                font-size: 1em;
+                max-width: 100%;
+            }
         }
     }
 
