@@ -635,7 +635,7 @@ footer {
 #experience-timeline {
     margin: 30px auto 0 auto;
     position: relative;
-    max-width: 1000px;
+    max-width: 900px;
 
     &:before {
         position: absolute;
@@ -669,7 +669,6 @@ footer {
     padding: 20px 30px;
     border-radius: 3px;
     text-align: left;
-    max-width: 560px;
 
     h3 {
         font-size: 1.5em;
@@ -689,7 +688,7 @@ footer {
     p {
         color: $text;
         font-size: 1em;
-        line-height: 1.6em;
+        line-height: 1.5em;
         margin: 0;
         text-align: justify;
     }
@@ -1114,6 +1113,7 @@ footer {
 
     .vtimeline-content{
         padding: 20px;
+        margin-right: 30px;
 
         p {
             font-size: 0.9em;
