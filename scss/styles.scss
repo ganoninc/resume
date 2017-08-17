@@ -151,12 +151,12 @@ body {
     }
 }
 
-@keyframes dropHeader {
+@keyframes fadeInHeader {
   0% {
-    transform: translateY(-100%);
+    opacity: 0;
   }
   100% {
-    transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -167,7 +167,7 @@ header {
     right: 0;
     text-align: center;
     z-index: 10;
-    animation-name: dropHeader;
+    animation-name: fadeInHeader;
     animation-iteration-count: 1;
     animation-timing-function: ease;
     animation-duration: 0.75s;
@@ -175,9 +175,9 @@ header {
     ul {
         display: inline-block;
         text-align: center;
-        padding: 10px;
+        padding: 15px;
         margin: 0;
-        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.45);
     }
 
     a {
@@ -236,6 +236,7 @@ header {
         background-color: rgba(255, 255, 255, 0.75);
         color: $base-color;
         width: 100%;
+        padding: 10px;
 
         a {
             color: $base-color;
@@ -246,6 +247,7 @@ header {
         background-color:white;
         color: $base-color;
         width: 100%;
+        padding: 10px;
 
         a {
             color: $base-color;
