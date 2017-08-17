@@ -4,6 +4,8 @@ var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
+var webserver = require('gulp-webserver');
+
 
 gulp.task('scripts', function() {
     return gulp.src('js/scripts.js')
@@ -31,7 +33,24 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('css'));
 });
 
-gulp.task('watch', ['scripts', 'styles'], function() {
+gulp.task('webserver', function() {
+    return gulp.src('./')
+        .pipe(webserver({
+            livereload: true,
+            directoryListing: true,
+            open: true,
+            enable: true, // need this set to true to enable livereload 
+            filter: function(fileName) {
+                if (fileName.match(/.scss$/)) { // exclude all source maps from livereload 
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        }));
+});
+
+gulp.task('watch', ['scripts', 'styles', 'webserver'], function() {
     gulp.watch('js/*.js', ['scripts']);
     gulp.watch('scss/*.scss', ['styles']);
 });
