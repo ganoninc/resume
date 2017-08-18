@@ -35,6 +35,10 @@
         }
     });
 
+    tippy('.tooltip', {
+        size: 'big'
+    });
+
     // Scroll to top
     $('#to-top').click(function() {
         $('html, body').animate({
