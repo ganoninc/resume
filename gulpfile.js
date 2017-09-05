@@ -41,7 +41,7 @@ gulp.task('webserver', function() {
             open: true,
             enable: true, // need this set to true to enable livereload 
             filter: function(fileName) {
-                if (fileName.match(/.scss$/) || fileName.match(/.min.js$/)) {
+                if (fileName.match(/.scss$/)) {
                     return false;
                 } else {
                     return true;
@@ -51,6 +51,6 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('watch', ['scripts', 'styles', 'webserver'], function() {
-    gulp.watch('js/*.js', ['scripts']);
+    gulp.watch('js/scripts.js', ['scripts']);
     gulp.watch('scss/*.scss', ['styles']);
 });
