@@ -93,7 +93,7 @@
     var isSafari = navigator.userAgent.match(/AppleWebKit/) && ! navigator.userAgent.match(/Chrome/);
 
     $(window).scroll(function () {//Au scroll dans la fenetre on déclenche la fonction
-        if ($(this).scrollTop() > 75) { 
+        if ($(this).scrollTop() > 0) { 
             $('#menu').addClass("shadow"); 
             if(isSafari){
                 $('header').addClass("translucent"); 
@@ -106,6 +106,15 @@
                 $('header').removeClass("translucent"); 
             else
                 $('header').removeClass("opaque");
+        }
+        if ($(this).scrollTop() > 1500){
+            $('#stars').addClass("animation-disabled"); 
+            $('#stars2').addClass("animation-disabled"); 
+            $('#stars3').addClass("animation-disabled"); 
+        }else{
+            $('#stars').removeClass("animation-disabled");
+            $('#stars2').removeClass("animation-disabled");
+            $('#stars3').removeClass("animation-disabled"); 
         }
     });
 
