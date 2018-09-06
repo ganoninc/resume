@@ -380,6 +380,26 @@ footer {
     background: $background-alt;
 }
 
+.btn-download {
+    background-color: white;
+    display: inline-block;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid;
+    border-radius: 10px;
+    color: #3498db;
+    padding: 10px;
+    transition-property: all;
+    transition-duration: 0.25s;
+    transition-timing-function: ease;
+    text-decoration: none;
+}
+.btn-download:hover {
+    color: #2471a5;
+    background-color: #eff8ff;;
+    text-decoration: none; //background: #eee;
+    border-radius: 4px;
+}
 
 /*
     --------------------------
@@ -570,6 +590,7 @@ footer {
         font-size: 1.2em;
         color: $text;
         line-height: 1.6em;
+        font-weight: lighter;
     }
 }
 
@@ -634,6 +655,9 @@ footer {
         font-weight: 300;
         color: #7e8890;
         margin: 0 0 0 0;
+    }
+    strong{
+        color:#525252;
     }
     p {
         color: $text;
@@ -808,23 +832,6 @@ footer {
         color: #7e8890;
         max-width: 60%;
     }
-    a {
-        display: inline-block;
-        margin: auto;
-        margin-top: 20px;
-        color: #3498db;
-        padding: 10px;
-        transition-property: all;
-        transition-duration: 0.25s;
-        transition-timing-function: ease;
-        text-decoration: none;
-    }
-    a:hover {
-        color: #217dbb;
-        text-decoration: none; //background: #eee;
-        border-radius: 4px;
-        text-decoration: underline;
-    }
 }
 
 
@@ -885,7 +892,6 @@ footer {
 #skills {
     padding: 50px 15px;
     text-align: center;
-    border-bottom: 1px solid #dcd9d9;
     h2 {
         color: $heading;
         margin-bottom: 50px;
@@ -938,20 +944,23 @@ footer {
         margin: auto;
         .download-item {
             color: #337ab7;
+            padding: 30px;
             .icon {
                 margin: auto;
-                width: 71px;
-                height: 101px;
-                border: 4px solid;
-                border-radius: 6px;
+                width: 133px;
+                height: 190px;
+                border-radius: 2px;
                 margin-bottom: 20px;
+                background-color: white;
+                box-shadow: 0px 1px 5px 0px #e2e2e2;
+
                 .label {
                     display: block;
                     position: relative;
-                    transform: rotate(-90deg);
-                    bottom: -44px;
-                    left: 18px;
+                    bottom: -55px;
+                    left: 0px;
                     font-size: 14pt;
+                    color: #888888;
                 }
             }
         }
@@ -1150,6 +1159,7 @@ footer {
         }
         h2 {
             font-size: 1.3em;
+            margin-top: 25px;
         }
         a {
             padding: 10px 20px;
@@ -1157,6 +1167,21 @@ footer {
     }
     #lead-down {
         display: none;
+    }
+    #about {
+        .heading {
+            font-size: 1.5em;
+        }
+    }
+    .vtimeline-content {
+        p {
+            text-align: left;
+        }
+        ul{
+            li{
+                text-align: left;
+            }
+        }
     }
     .education-block {
         h3,
