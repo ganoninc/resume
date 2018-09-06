@@ -25,5 +25,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ganoninc/resume.git"
+  },
+  "dependencies": {
+    "npm": "^6.4.1"
   }
 }
