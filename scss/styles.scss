@@ -568,7 +568,7 @@ footer {
 */
 
 #about {
-    padding: 100px 15px;
+    padding: 80px 15px;
     text-align: center;
     h2 {
         color: $heading;
@@ -602,7 +602,7 @@ footer {
 */
 
 #experience {
-    padding: 50px 15px;
+    padding: 80px 15px;
     text-align: center;
     h2 {
         color: $heading;
@@ -734,7 +734,7 @@ footer {
 */
 
 #education {
-    padding: 50px 15px 20px 15px;
+    padding: 80px 15px;
     text-align: center;
     h2 {
         color: $heading;
@@ -785,7 +785,7 @@ footer {
 */
 
 #publications {
-    padding: 50px 15px;
+    padding: 80px 15px;
     text-align: center;
     h2 {
         color: $heading;
@@ -842,7 +842,7 @@ footer {
 */
 
 #projects {
-    padding: 50px 15px;
+    padding: 80px 15px;
     text-align: center;
     h2 {
         color: $heading;
@@ -890,7 +890,7 @@ footer {
 */
 
 #skills {
-    padding: 50px 15px;
+    padding: 80px 15px;
     text-align: center;
     h2 {
         color: $heading;
@@ -933,7 +933,7 @@ footer {
 */
 
 #others {
-    padding: 50px 15px;
+    padding: 80px 15px;
     text-align: center;
     h2 {
         color: $heading;
@@ -975,7 +975,7 @@ footer {
 */
 
 #contact {
-    padding: 50px 15px;
+    padding: 80px 15px;
     background: $base-color;
     text-align: center;
     h2 {
@@ -1103,12 +1103,13 @@ footer {
     #publications {
         .publication-block {
             h3 {
-                font-size: 1.4em;
+                font-size: 1.3em;
                 width: auto;
             }
             .publication-publication {
                 font-size: 1em;
                 max-width: 100%;
+                line-height: 1.5em;
             }
         }
     }
@@ -1172,6 +1173,9 @@ footer {
         .heading {
             font-size: 1.5em;
         }
+        p {
+            font-size: 1em;
+        }
     }
     .vtimeline-content {
         p {
@@ -1221,6 +1225,12 @@ footer {
     }
     #experience {
         .vtimeline-content {
+            h3 {
+                font-size: 1.3em;
+            }
+            h4 {
+                font-size: 1.1em;
+            }
             ul {
                 margin-left: -10px;
                 li:before {

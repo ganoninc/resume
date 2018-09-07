@@ -23,7 +23,7 @@
 
         e.preventDefault();
         var heading = $(this).attr('href');
-        var scrollDistance = $(heading).offset().top - 62;
+        var scrollDistance = $(heading).offset().top;
 
         $('html, body').animate({
             scrollTop: scrollDistance + 'px'
@@ -48,7 +48,7 @@
 
     // Scroll to first element
     $('#lead-down span').click(function() {
-        var scrollDistance = $('#lead').next().offset().top - 62;
+        var scrollDistance = $('#lead').next().offset().top;
         $('html, body').animate({
             scrollTop: scrollDistance + 'px'
         }, 1250);
