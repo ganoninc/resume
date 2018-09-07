@@ -863,7 +863,7 @@ footer {
     margin: 0 auto 30px auto;
     overflow: hidden;
     background: #fff;
-    border-radius: 4px;
+    box-shadow: 0px 1px 5px 0px #e2e2e2;
 }
 
 .project-image {
@@ -960,6 +960,7 @@ footer {
                 margin-bottom: 20px;
                 background-color: white;
                 box-shadow: 0px 1px 5px 0px #e2e2e2;
+                background-color: #f2f2f5;
 
                 .label {
                     display: block;
@@ -967,7 +968,7 @@ footer {
                     bottom: -55px;
                     left: 0px;
                     font-size: 14pt;
-                    color: #888888;
+                    color: #353e51;
                 }
             }
         }
