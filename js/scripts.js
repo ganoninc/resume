@@ -122,6 +122,7 @@
         e.preventDefault();
         $("#show-more-experiences").hide();
         $("#experience").removeClass("partially-hidden");
+        ga('send', 'event', 'UI', 'Show More', 'Experience');
     });
 
 })(jQuery);
