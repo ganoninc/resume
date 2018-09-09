@@ -380,7 +380,7 @@ footer {
     background: $background-alt;
 }
 
-.btn-download {
+.btn-download, .btn-show-more {
     background-color: white;
     display: inline-block;
     margin: auto;
@@ -393,8 +393,9 @@ footer {
     transition-duration: 0.25s;
     transition-timing-function: ease;
     text-decoration: none;
+    cursor: pointer;
 }
-.btn-download:hover {
+.btn-download:hover, .btn-show-more:hover {
     color: #2471a5;
     background-color: #eff8ff;;
     text-decoration: none; //background: #eee;
@@ -613,6 +614,31 @@ footer {
     text-align: center;
     h2 {
         color: $heading;
+    }
+}
+
+.partially-hidden{
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+#show-more-experiences{
+    background-color: #f2f2f5;
+    background: linear-gradient(to top,
+         #f2f2f5 50%, 
+         rgba(255,255,255, 0) 100%
+    );
+    height: 200px;
+    margin-top: -200px;
+    position: relative;
+    z-index: 100;
+    display: flex;  
+    justify-content: center;
+    align-items: flex-end;
+    #show-more-experiences__button {
+        display: inline-block;
+        margin: 0;
+        margin-bottom: 50px;
     }
 }
 

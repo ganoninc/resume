@@ -118,4 +118,10 @@
         }
     });
 
+    $("#show-more-experiences__button").click(function (e) {
+        e.preventDefault();
+        $("#show-more-experiences").hide();
+        $("#experience").removeClass("partially-hidden");
+    });
+
 })(jQuery);
