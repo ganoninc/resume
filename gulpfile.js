@@ -50,7 +50,7 @@ gulp.task('webserver', function() {
         }));
 });
 
-gulp.task('watch', ['scripts', 'styles', 'webserver'], function() {
+gulp.task('watch', gulp.series('scripts', 'styles', 'webserver'), function() {
     gulp.watch('js/scripts.js', ['scripts']);
     gulp.watch('scss/*.scss', ['styles']);
 });
