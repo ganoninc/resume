@@ -18,7 +18,7 @@
     "gulp-autoprefixer": "^4.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.0",
     "gulp-webserver": "^0.9.1"
   },
@@ -27,6 +27,6 @@
     "url": "https://github.com/ganoninc/resume.git"
   },
   "dependencies": {
-    "npm": "^6.8.0"
+    "npm": "^6.9.0"
   }
 }
