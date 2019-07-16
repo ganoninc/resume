@@ -1,8 +1,10 @@
 # My Resume
 
-Thanks to @RyanFitzgerald for his devportfolio-template (https://github.com/RyanFitzgerald/devportfolio-template)
+My resume is based on a fork of Dev Portfolio Template by Ryan Fitzgerald (@RyanFitzgerald - https://github.com/RyanFitzgerald/devportfolio-template)
 
-See it there: https://ganoninc.github.io/resume/
+The Stars animation used in the header was found on CodePen.io (http://codepen.io/saransh/pen/BKJun), thanks to its creator.
+
+My resume is available here: https://ganoninc.github.io/resume/
 
 ## License
 
