@@ -701,25 +701,22 @@ footer {
         text-align: justify;
     }
     ul {
-        margin: 20px 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 22px;
         li {
             display: block;
             margin: 10px 0px;
+            padding-left:10px;
             font-size: 0.9em;
             line-height: 1.5em;
             color: $text;
             max-width: 430px;
             text-align: justify;
-        }
-        li:before {
-            /*Using a Bootstrap glyphicon as the bullet point*/
-            content: "\f00c";
-            font-family: "Font Awesome 5 Pro";
-            font-size: 1em;
-            float: left;
-            margin-top: 1px;
-            margin-left: -40px;
-            color: $base-color;
+
+            .fa-li {
+                color: $base-color;
+            }
         }
     }
     
