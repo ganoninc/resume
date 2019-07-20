@@ -125,4 +125,51 @@
         ga('send', 'event', 'UI', 'Show More', 'Experience');
     });
 
+    $(".skill-data-type").hover(
+        function () {
+            $(".skill-data-type").addClass("skill-hover-event");
+        }, function () {
+            $(".skill-data-type").removeClass("skill-hover-event");
+        }
+    );
+
+    $(".skill-ux-type").hover(
+        function () {
+            $(".skill-ux-type").addClass("skill-hover-event");
+        }, function () {
+            $(".skill-ux-type").removeClass("skill-hover-event");
+        }
+    );
+
+    $(".skill-javascript-type").hover(
+        function () {
+            $(".skill-javascript-type").addClass("skill-hover-event");
+        }, function () {
+            $(".skill-javascript-type").removeClass("skill-hover-event");
+        }
+    );
+
+    $(".skill-MAMP-type").hover(
+        function () {
+            $(".skill-MAMP-type").addClass("skill-hover-event");
+        }, function () {
+            $(".skill-MAMP-type").removeClass("skill-hover-event");
+        }
+    );
+
+    $(".skill-other-type").hover(
+        function () {
+            $(".skill-other-type").addClass("skill-hover-event");
+        }, function () {
+            $(".skill-other-type").removeClass("skill-hover-event");
+        }
+    );
+
+    $(".skill-java-type").hover(
+        function () {
+            $(".skill-java-type").addClass("skill-hover-event");
+        }, function () {
+            $(".skill-java-type").removeClass("skill-hover-event");
+        }
+    );
 })(jQuery);
