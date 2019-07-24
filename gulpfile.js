@@ -33,9 +33,7 @@ function buildScriptsTask() {
 }
 
 function watchScriptsTask() {
-    return watch('js/scripts.js', function () {
-        series(buildScriptsTask);
-    });
+    watch('js/scripts.js', series(buildScriptsTask));
 }
 
 function buildStylesTask() {
@@ -52,12 +50,10 @@ function buildStylesTask() {
 }
 
 function watchStylesTask() {
-    return watch('scss/*.scss', function () {
-        series(buildStylesTask);
-    });
+    watch('scss/*.scss', series(buildStylesTask));
 }
 
-function webserverTask() {
+function runWebserverTask() {
     return src('./')
         .pipe(webserver({
             livereload: true,
@@ -74,21 +70,21 @@ function webserverTask() {
         }));
 }
 
-function buildTask(cb) {
-    buildStylesTask();
-    buildScriptsTask();
-    if(cb)
-        cb();
-}
+const launchLocalWebserver = series(
+    buildScriptsTask, 
+    buildStylesTask, 
+    parallel(
+        watchScriptsTask,
+        watchStylesTask,
+        runWebserverTask
+    )
+);
 
+const buildAssets = series(
+    buildScriptsTask,
+    buildStylesTask
+);
 
-function watchTask(cb) {
-    buildTask();
-    webserverTask();
-    parallel(watchScriptsTask, watchStylesTask);
-    cb();
-}
-
-exports.default = watchTask;
-exports.start = watchTask;
-exports.build = buildTask;
+exports.default = launchLocalWebserver;
+exports.start = launchLocalWebserver;
+exports.build = buildAssets;
