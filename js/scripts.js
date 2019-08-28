@@ -100,18 +100,11 @@
 
     $(window).scroll(function () {//Au scroll dans la fenetre on déclenche la fonction
         if ($(this).scrollTop() > $('#lead').height()) { 
+            $('.stars').addClass("animation-disabled");
             $('header').addClass("visible"); 
         } else{
+            $('.stars').removeClass("animation-disabled");
             $('header').removeClass("visible"); 
-        }
-        if ($(this).scrollTop() > 1500){
-            $('#stars').addClass("animation-disabled"); 
-            $('#stars2').addClass("animation-disabled"); 
-            $('#stars3').addClass("animation-disabled"); 
-        }else{
-            $('#stars').removeClass("animation-disabled");
-            $('#stars2').removeClass("animation-disabled");
-            $('#stars3').removeClass("animation-disabled"); 
         }
     });
 
