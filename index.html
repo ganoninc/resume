@@ -63,13 +63,13 @@
                 <a id="link-education" href="#education">Education</a>
             </li>
             <li>
-                <a id="link-publications" href="#publications">Publications</a>
+                <a id="link-projects" href="#projects">Projects</a>
             </li>
             <li>
                 <a id="link-skills" href="#skills">Skills</a>
             </li>
             <li>
-                <a id="link-projects" href="#projects">Projects</a>
+                <a id="link-publications" href="#publications">Publications</a>
             </li>
             <li>
                 <a id="link-others" href="#others" class="tooltip" data-theme="resume" title="Portfolio and Resume">Others</a>
@@ -82,9 +82,9 @@
     <!-- End header -->
 
     <div id="lead">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
+        <div id="stars" class="stars"></div>
+        <div id="stars2" class="stars"></div>
+        <div id="stars3" class="stars"></div>
         <div id="lead-content">
             <h1>Romain Giovanetti</h1>
             <h2>Full-Stack&nbsp;Designer</h2>
@@ -311,25 +311,98 @@
     </div>
     <!-- End #education -->
 
-    <div id="publications" class="background-alt">
-        <h2 class="heading">Publications</h2>
-        <div class="publication-block">
-            <h3>Model of computer architecture for online social networks flexible data analysis: the case of Twitter data</h3>
-            <span class="publication-authors">Romain Giovanetti & Luigi Lancieri</span>
-            <span class="publication-publication">2016 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM)</span>
-            <a class="btn-download" href="./pdf/07752310.pdf" target="_blank" onclick="ga('send', 'event', 'PDF', 'Download', 'Model of computer architecture for online social networks flexible data analysis: The case of Twitter data – PDF Download');" download><i class="far fa-file-pdf"></i>&nbsp;&nbsp;Download</a>
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Projects</h2>
+        <div class="container">
+            <div class="row">
+                <div class="project">
+                    <div class="project-image">
+                        <img width="300" height="300" src="images/project-blog-vie-usa.png" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Blog sur mon drôle de VIE</h3>
+                        <p>
+                            This blog highlights my life in the United States as an international intern.
+                            <br /><br />
+                            It aims to provide useful information to young french professionals who'd like to work in the
+                            United States.
+                        </p>
+                        <a target="_blank" onclick="ga('send', 'event', 'External Link', 'Open', 'Blog VIE USA');"
+                            href="https://vie-usa.giovanetti.fr">Read the blog (written in french)</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+                <div class="project">
+                    <div class="project-image">
+                        <img width="300" height="300" src="images/project-winerror.png" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Windows XP Error Simulator</h3>
+                        <p>
+                            Do you remember the time when Windows XP used to freeze and allow you to draw incredible things
+                            using the error window?
+                            This app reproduces that.
+                            <br />
+                            <br />
+                            Have some fun and nostalgia with this Windows XP Error Simulator!
+                        </p>
+                        <a target="_blank" onclick="ga('send', 'event', 'External Link', 'Open', 'winerror-simulator');"
+                            href="https://ganoninc.github.io/winerror-simulator/">Try this app</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+                <div class="project">
+                    <div class="project-image">
+                        <img width="300" height="300" src="images/project-emoji-weather-map.png" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Emoji Weather Map</h3>
+                        <p>
+                            This simple React App displays weather forecast using emojis.
+                            <br />
+                            The goal is to learn React while having some fun.
+                        </p>
+                        <a target="_blank" onclick="ga('send', 'event', 'External Link', 'Open', 'emoji-weather-map');"
+                            href="https://ganoninc.github.io/emojis-weather-map/">Try this app</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+                <div class="project">
+                    <div class="project-image">
+                        <img width="300" height="300" src="images/trident-kloader-updated.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Trident + Kloader (updated version)</h3>
+                        <p>
+                            Downgrading iOS is not permited by Apple for security reasons. This app allows to downgrade
+                            32-Bit iDevices on iOS 9.1-9.3.4, without the use of a fully fledged
+                            jailbreak.
+                            <br />
+                            <br />
+                            This hack makes use of the Trident exploit chain by benjamin-42. Special thanks to all the
+                            people who contributed to this repository.
+                        </p>
+                        <a target="_blank"
+                            onclick="ga('send', 'event', 'External Link', 'Open', 'trident-kloader-updated');"
+                            href="https://github.com/ganoninc/trident-kloader-updated">Browse the repo on Github</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+                <a id="project-github-link" onclick="ga('send', 'event', 'External Link', 'Open', 'Github');"
+                    href="https://github.com/ganoninc/" target="_blank"><i class="fab fa-github" aria-hidden="true"></i> See
+                    more projects on my Github profile</a>
+            </div>
         </div>
-        <!-- End .publication-block -->
-
-        <div class="publication-block">
-            <h3>Multilevel exploration in Twitter social stream</h3>
-            <span class="publication-authors">Luigi Lancieri & Romain Giovanetti</span>
-            <span class="publication-publication">2016 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM)</span>
-            <a class="btn-download" href="./pdf/07752317.pdf" target="_blank" onclick="ga('send', 'event', 'PDF', 'Download', 'Multilevel exploration in Twitter social stream – PDF Download');" download><i class="far fa-file-pdf"></i>&nbsp;&nbsp;Download</a>
-        </div>
-        <!-- End .publication-block -->
     </div>
-    <!-- End #publications -->    
+    <!-- End #projects -->
 
     <div id="skills">
         <h2 class="heading">Skills</h2>
@@ -389,89 +462,32 @@
     </div>
     <!-- End #skills -->
 
-    <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
-        <div class="container">
-            <div class="row">
-                <div class="project">
-                    <div class="project-image">
-                        <img width="300" height="300" src="images/project-blog-vie-usa.png" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Blog sur mon drôle de VIE</h3>
-                        <p>
-                            This blog highlights my life in the United States as an international intern.
-                            <br /><br />
-                            It aims to provide useful information to young french professionals who'd like to work in the United States.
-                        </p>
-                        <a target="_blank" onclick="ga('send', 'event', 'External Link', 'Open', 'Blog VIE USA');" href="https://vie-usa.giovanetti.fr">Read the blog (written in french)</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-                <div class="project">
-                    <div class="project-image">
-                        <img width="300" height="300" src="images/project-winerror.png" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Windows XP Error Simulator</h3>
-                        <p>
-                            Do you remember the time when Windows XP used to freeze and allow you to draw incredible things using the error window?
-                            This app reproduces that.
-                            <br />
-                            <br />
-                            Have some fun and nostalgia with this Windows XP Error Simulator!
-                        </p>
-                        <a target="_blank" onclick="ga('send', 'event', 'External Link', 'Open', 'winerror-simulator');" href="https://ganoninc.github.io/winerror-simulator/">Try this app</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-                <div class="project">
-                    <div class="project-image">
-                        <img width="300" height="300" src="images/project-emoji-weather-map.png" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Emoji Weather Map</h3>
-                        <p>
-                            This simple React App displays weather forecast using emojis.
-                            <br />
-                            The goal is to learn React while having some fun.
-                        </p>
-                        <a target="_blank" onclick="ga('send', 'event', 'External Link', 'Open', 'emoji-weather-map');"
-                            href="https://ganoninc.github.io/emojis-weather-map/">Try this app</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-                <div class="project">
-                    <div class="project-image">
-                        <img width="300" height="300" src="images/trident-kloader-updated.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Trident + Kloader (updated version)</h3>
-                        <p>
-                            Downgrading iOS is not permited by Apple for security reasons. This app allows to downgrade 32-Bit iDevices on iOS 9.1-9.3.4, without the use of a fully fledged
-                            jailbreak.
-                            <br />
-                            <br />
-                            This hack makes use of the Trident exploit chain by benjamin-42. Special thanks to all the people who contributed to this repository.
-                        </p>
-                        <a target="_blank" onclick="ga('send', 'event', 'External Link', 'Open', 'trident-kloader-updated');"
-                            href="https://github.com/ganoninc/trident-kloader-updated">Browse the repo on Github</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-                <a id="project-github-link" onclick="ga('send', 'event', 'External Link', 'Open', 'Github');" href="https://github.com/ganoninc/" target="_blank"><i class="fab fa-github" aria-hidden="true"></i> See more projects on my Github profile</a>
-            </div>
+    <div id="publications" class="background-alt">
+        <h2 class="heading">Publications</h2>
+        <div class="publication-block">
+            <h3>Model of computer architecture for online social networks flexible data analysis: the case of Twitter data
+            </h3>
+            <span class="publication-authors">Romain Giovanetti & Luigi Lancieri</span>
+            <span class="publication-publication">2016 IEEE/ACM International Conference on Advances in Social Networks
+                Analysis and Mining (ASONAM)</span>
+            <a class="btn-download" href="./pdf/07752310.pdf" target="_blank"
+                onclick="ga('send', 'event', 'PDF', 'Download', 'Model of computer architecture for online social networks flexible data analysis: The case of Twitter data – PDF Download');"
+                download><i class="far fa-file-pdf"></i>&nbsp;&nbsp;Download</a>
         </div>
+        <!-- End .publication-block -->
+    
+        <div class="publication-block">
+            <h3>Multilevel exploration in Twitter social stream</h3>
+            <span class="publication-authors">Luigi Lancieri & Romain Giovanetti</span>
+            <span class="publication-publication">2016 IEEE/ACM International Conference on Advances in Social Networks
+                Analysis and Mining (ASONAM)</span>
+            <a class="btn-download" href="./pdf/07752317.pdf" target="_blank"
+                onclick="ga('send', 'event', 'PDF', 'Download', 'Multilevel exploration in Twitter social stream – PDF Download');"
+                download><i class="far fa-file-pdf"></i>&nbsp;&nbsp;Download</a>
+        </div>
+        <!-- End .publication-block -->
     </div>
-    <!-- End #projects -->
+    <!-- End #publications -->
 
     <div id="others" class="background">
         <h2 class="heading">Others</h2>
