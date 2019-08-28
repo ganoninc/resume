@@ -141,31 +141,19 @@ body {
     }
 }
 
-@keyframes fadeInHeader {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 .tippy-tooltip.resume-theme {
     font-size: 12pt;
     border: 1px solid grey;
 }
 
 header {
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: -75px;
     left: 0;
     right: 0;
     text-align: center;
     z-index: 10;
-    animation-name: fadeInHeader;
-    animation-iteration-count: 1;
-    animation-timing-function: ease;
-    animation-duration: 0.75s;
+    transition: all 0.25s ease 0.25s;
     ul {
         display: inline-block;
         text-align: center;
@@ -225,6 +213,9 @@ header {
     &.sticky {
         position: fixed;
         z-index: 999;
+    }
+    &.visible {
+        top: 0px;
     }
 }
 

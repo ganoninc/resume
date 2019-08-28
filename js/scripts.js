@@ -91,21 +91,18 @@
     });
 
     var isSafari = navigator.userAgent.match(/AppleWebKit/) && ! navigator.userAgent.match(/Chrome/);
+    if (isSafari) {
+        $('header').addClass("translucent");
+    }
+    else {
+        $('header').addClass("opaque");
+    }
 
     $(window).scroll(function () {//Au scroll dans la fenetre on déclenche la fonction
-        if ($(this).scrollTop() > 0) { 
-            $('#menu').addClass("shadow"); 
-            if(isSafari){
-                $('header').addClass("translucent"); 
-            }
-            else
-                $('header').addClass("opaque");
+        if ($(this).scrollTop() > $('#lead').height()) { 
+            $('header').addClass("visible"); 
         } else{
-            $('#menu').removeClass("shadow"); 
-            if(isSafari)
-                $('header').removeClass("translucent"); 
-            else
-                $('header').removeClass("opaque");
+            $('header').removeClass("visible"); 
         }
         if ($(this).scrollTop() > 1500){
             $('#stars').addClass("animation-disabled"); 
