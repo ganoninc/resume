@@ -230,7 +230,7 @@ header {
 
 #mobile-menu-open {
     opacity: 0;
-    display: block;
+    display: none;
     cursor: pointer;
     position: fixed;
     right: 20px;
@@ -902,7 +902,7 @@ footer {
     top: 50%;
     transform: translateY(-50%);
     margin-left: 300px;
-    padding: 15px;
+    padding: 30px;
     h3 {
         font-size: 1.5em;
         font-weight: 300;
@@ -1183,7 +1183,7 @@ footer {
             }
         }
     }
-    #mobile-menu-close {
+    #mobile-menu-close, #mobile-menu-open {
         display: block;
     }
     #menu {
@@ -1278,9 +1278,8 @@ footer {
                 font-size: 1.1em;
             }
             ul {
-                margin-left: -10px;
                 li:before {
-                    padding-left: 10px;
+                    //padding-left: 10px;
                 }
             }
         }
