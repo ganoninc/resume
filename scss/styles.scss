@@ -229,7 +229,8 @@ header {
 }
 
 #mobile-menu-open {
-    display: none;
+    opacity: 0;
+    display: block;
     cursor: pointer;
     position: fixed;
     right: 20px;
@@ -240,6 +241,11 @@ header {
     padding: 0 10px;
     border-radius: 4px;
     background: $background;
+    transition: all 0.25s linear;
+
+    &.visible {
+        opacity: 1;
+    }
 }
 
 #mobile-menu-close {
@@ -1177,7 +1183,6 @@ footer {
             }
         }
     }
-    #mobile-menu-open,
     #mobile-menu-close {
         display: block;
     }
