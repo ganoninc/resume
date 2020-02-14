@@ -885,7 +885,12 @@ footer {
 }
 
 .project {
-    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    align-content: start;
     max-width: 900px;
     margin: 0 auto 30px auto;
     overflow: hidden;
@@ -894,14 +899,11 @@ footer {
 }
 
 .project-image {
-    float: left;
+    flex:0;
 }
 
 .project-info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 300px;
+    flex: 1;
     padding: 30px;
     h3 {
         font-size: 1.5em;
