@@ -229,6 +229,7 @@ header {
 }
 
 #mobile-menu-open {
+    opacity: 0;
     display: none;
     cursor: pointer;
     position: fixed;
@@ -240,6 +241,11 @@ header {
     padding: 0 10px;
     border-radius: 4px;
     background: $background;
+    transition: all 0.25s linear;
+
+    &.visible {
+        opacity: 1;
+    }
 }
 
 #mobile-menu-close {
@@ -879,7 +885,12 @@ footer {
 }
 
 .project {
-    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    align-content: start;
     max-width: 900px;
     margin: 0 auto 30px auto;
     overflow: hidden;
@@ -888,15 +899,12 @@ footer {
 }
 
 .project-image {
-    float: left;
+    flex:0;
 }
 
 .project-info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 300px;
-    padding: 15px;
+    flex: 1;
+    padding: 30px;
     h3 {
         font-size: 1.5em;
         font-weight: 300;
@@ -1177,8 +1185,7 @@ footer {
             }
         }
     }
-    #mobile-menu-open,
-    #mobile-menu-close {
+    #mobile-menu-close, #mobile-menu-open {
         display: block;
     }
     #menu {
@@ -1273,9 +1280,8 @@ footer {
                 font-size: 1.1em;
             }
             ul {
-                margin-left: -10px;
                 li:before {
-                    padding-left: 10px;
+                    //padding-left: 10px;
                 }
             }
         }

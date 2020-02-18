@@ -102,9 +102,11 @@
         if ($(this).scrollTop() > $('#lead').height()) { 
             $('.stars').addClass("animation-disabled");
             $('header').addClass("visible"); 
+            $('#mobile-menu-open').addClass("visible"); 
         } else{
             $('.stars').removeClass("animation-disabled");
             $('header').removeClass("visible"); 
+            $('#mobile-menu-open').removeClass("visible"); 
         }
     });
 
