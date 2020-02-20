@@ -50,16 +50,16 @@ $heading: #374054;
 $text: #74808a;
 // n is number of stars required
 @function multiple-box-shadow ($n) {
-    $value: '#{random(2000)}px #{random(2000)}px #FFF';
+    $value: '#{random(2560)}px #{random(2560)}px #FFF';
     @for $i from 2 through $n {
-        $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF';
+        $value: '#{$value} , #{random(2560)}px #{random(2560)}px #FFF';
     }
     @return unquote($value)
 }
 
-$shadows-small: multiple-box-shadow(1000);
-$shadows-medium: multiple-box-shadow(200);
-$shadows-big: multiple-box-shadow(100);
+$shadows-small: multiple-box-shadow(1025);
+$shadows-medium: multiple-box-shadow(250);
+$shadows-big: multiple-box-shadow(125);
 // infinite: animations On
 // 0: animations off
 $infinite-animation-switch: infinite;
@@ -474,7 +474,7 @@ footer {
             transform: translateY(0px);
         }
         to {
-            transform: translateY(-2000px);
+            transform: translateY(-2560px);
         }
     }
     .animation-disabled {
@@ -1080,7 +1080,7 @@ footer {
         width: auto;
         text-align: left;
         position: inherit;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
         display: block;
         margin-left: 70px;
         font-size: 1.4rem;
