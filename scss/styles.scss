@@ -401,6 +401,11 @@ footer {
     border-radius: 4px;
 }
 
+.extra-link{
+    margin-top: 75px;
+    font-size: 1.75rem;
+}
+
 /*
     --------------------------
     ----- 4. Lead Styles -----
@@ -926,11 +931,6 @@ footer {
     }
 }
 
-#project-github-link {
-    display: block;
-    margin-top:60px;
-}
-
 
 /*
     -------------------------------
@@ -977,49 +977,6 @@ footer {
             opacity: 1;
             transform: scale(1.125);
             color: black;
-        }
-    }
-}
-
-
-/*
-    -------------------------------
-    ----- 9.b Others Styles -----
-    -------------------------------
-*/
-
-#others {
-    padding: 80px 15px;
-    text-align: center;
-    h2 {
-        color: $heading;
-        margin-bottom: 50px;
-    }
-    .row {
-        max-width: 900px;
-        margin: auto;
-        .download-item {
-            color: #337ab7;
-            padding: 30px;
-            .icon {
-                margin: auto;
-                width: 133px;
-                height: 190px;
-                border-radius: 2px;
-                margin-bottom: 20px;
-                background-color: white;
-                box-shadow: 0px 1px 5px 0px #e2e2e2;
-                background-color: #f2f2f5;
-
-                .label {
-                    display: block;
-                    position: relative;
-                    bottom: -55px;
-                    left: 0px;
-                    font-size: 14pt;
-                    color: #353e51;
-                }
-            }
         }
     }
 }
