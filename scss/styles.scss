@@ -760,6 +760,16 @@ footer {
     color: #374054;
 }
 
+.vtimeline-location {
+    width: 260px;
+    text-align: right;
+    position: absolute;
+    left: 0;
+    top: 45px;
+    font-size: 1.25rem;
+    font-weight: normal;
+}
+
 
 /*
     -------------------------------
@@ -1064,6 +1074,16 @@ footer {
         margin-bottom: 15px;
         display: block;
         margin-left: 70px;
+    }
+    .vtimeline-location {
+        width: auto;
+        text-align: left;
+        position: inherit;
+        margin-bottom: 15px;
+        display: block;
+        margin-left: 70px;
+        font-size: 1.4rem;
+        font-weight: normal;
     }
     .vtimeline-icon {
         margin-left: 0;
