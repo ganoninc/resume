@@ -4,8 +4,6 @@ My resume is based on a fork of Dev Portfolio Template by Ryan Fitzgerald (@Ryan
 
 The Stars animation used in the header was found on CodePen.io (http://codepen.io/saransh/pen/BKJun), thanks to its creator.
 
-My resume is available here: https://ganoninc.github.io/resume/
-
 ## License
 
 Completely free (MIT)! See [LICENSE.md](LICENSE.md) for more.
