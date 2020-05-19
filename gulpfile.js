@@ -55,7 +55,7 @@ function watchStylesTask() {
 }
 
 function buildExperienceThumbnailsTask() {
-    return src(['images/experience/**/*.png', 'images/experience/**/*.jpg'])
+    return src(['images/experience/**/*.png', 'images/experience/**/*.jpg', 'images/experience/**/*.JPG', 'images/experience/**/*.jpeg'])
     .pipe(imageResize({
         width: 200,
         height: 200
