@@ -2,10 +2,8 @@
     Title: Dev Portfolio Template
     Version: 1.1.2
     Last Change: 03/21/17
-    Author: Ryan Fitzgerald
-    Repo: https://github.com/RyanFitzgerald/devportfolio-template
-    Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
-
+    Author: Ryan Fitzgerald, Romain Giovanetti
+    Repo: https://github.com/ganoninc/resume
     Description: This file contains all the scripts associated with the single-page
     portfolio website.
 */
@@ -90,23 +88,22 @@
         $('header, body').removeClass('active');
     });
 
-    var isSafari = navigator.userAgent.match(/AppleWebKit/) && ! navigator.userAgent.match(/Chrome/);
-    if (isSafari) {
-        $('header').addClass("translucent");
-    }
-    else {
-        $('header').addClass("opaque");
-    }
-
     $(window).scroll(function () {//Au scroll dans la fenetre on déclenche la fonction
-        if ($(this).scrollTop() > $('#lead').height()) { 
+        if ($(this).scrollTop() > 5) { 
+
+        }else{
+
+        }
+
+        if($(this).scrollTop() > $('#lead').height() + 25) {
             $('.stars').addClass("animation-disabled");
             $('header').addClass("visible"); 
             $('#mobile-menu-open').addClass("visible"); 
-        } else{
+        } else {
             $('.stars').removeClass("animation-disabled");
             $('header').removeClass("visible"); 
             $('#mobile-menu-open').removeClass("visible"); 
+
         }
     });
 
