@@ -35,10 +35,6 @@
         }
     });
 
-    tippy('.tooltip', {
-        size: 'big'
-    });
-
     // Scroll to top
     $('#to-top').click(function() {
         $('html, body').animate({
@@ -72,6 +68,10 @@
 
         // Add dates to the timeline if exists
         $this.find('.vtimeline-content').each(function() {
+            var location = $(this).data('location');
+            if (location) { // Prepend if exists
+                $(this).parent().prepend('<span class="vtimeline-location">' + location + '</span>');
+            }
             var date = $(this).data('date');
             if (date) { // Prepend if exists
                 $(this).parent().prepend('<span class="vtimeline-date">'+date+'</span>');
@@ -102,9 +102,11 @@
         if ($(this).scrollTop() > $('#lead').height()) { 
             $('.stars').addClass("animation-disabled");
             $('header').addClass("visible"); 
+            $('#mobile-menu-open').addClass("visible"); 
         } else{
             $('.stars').removeClass("animation-disabled");
             $('header').removeClass("visible"); 
+            $('#mobile-menu-open').removeClass("visible"); 
         }
     });
 

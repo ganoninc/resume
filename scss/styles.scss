@@ -50,16 +50,16 @@ $heading: #374054;
 $text: #74808a;
 // n is number of stars required
 @function multiple-box-shadow ($n) {
-    $value: '#{random(2000)}px #{random(2000)}px #FFF';
+    $value: '#{random(2560)}px #{random(2560)}px #FFF';
     @for $i from 2 through $n {
-        $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF';
+        $value: '#{$value} , #{random(2560)}px #{random(2560)}px #FFF';
     }
     @return unquote($value)
 }
 
-$shadows-small: multiple-box-shadow(1000);
-$shadows-medium: multiple-box-shadow(200);
-$shadows-big: multiple-box-shadow(100);
+$shadows-small: multiple-box-shadow(1025);
+$shadows-medium: multiple-box-shadow(250);
+$shadows-big: multiple-box-shadow(125);
 // infinite: animations On
 // 0: animations off
 $infinite-animation-switch: infinite;
@@ -229,6 +229,7 @@ header {
 }
 
 #mobile-menu-open {
+    opacity: 0;
     display: none;
     cursor: pointer;
     position: fixed;
@@ -240,6 +241,11 @@ header {
     padding: 0 10px;
     border-radius: 4px;
     background: $background;
+    transition: all 0.25s linear;
+
+    &.visible {
+        opacity: 1;
+    }
 }
 
 #mobile-menu-close {
@@ -395,6 +401,11 @@ footer {
     border-radius: 4px;
 }
 
+.extra-link{
+    margin-top: 75px;
+    font-size: 1.75rem;
+}
+
 /*
     --------------------------
     ----- 4. Lead Styles -----
@@ -463,7 +474,7 @@ footer {
             transform: translateY(0px);
         }
         to {
-            transform: translateY(-2000px);
+            transform: translateY(-2560px);
         }
     }
     .animation-disabled {
@@ -567,10 +578,9 @@ footer {
     .profile-picture{
         display: block;
         margin: auto;
-        border-radius: 100px;
         margin-bottom: 50px;
-        box-shadow: 0px 1px 1px 0px #dad8d8;
-        transition: all 0.25s ease;
+        border: 1px solid #e0e0e0;
+        padding: 1px;
     }
     h2 {
         color: $heading;
@@ -594,10 +604,6 @@ footer {
         line-height: 1.6em;
         font-weight: lighter;
     }
-    &:hover .profile-picture {
-        transform: scale(1.25);
-        border-radius: 25px;
-    }
 }
 
 
@@ -616,7 +622,7 @@ footer {
 }
 
 .partially-hidden{
-    max-height: 100vh;
+    height: 1425px;
     overflow: hidden;
 }
 
@@ -626,8 +632,8 @@ footer {
          #f2f2f5 50%, 
          rgba(255,255,255, 0) 100%
     );
-    height: 200px;
-    margin-top: -200px;
+    height: 250px;
+    margin-top: -250px;
     position: relative;
     z-index: 100;
     display: flex;  
@@ -754,6 +760,17 @@ footer {
     color: #374054;
 }
 
+.vtimeline-location {
+    width: 260px;
+    text-align: right;
+    position: absolute;
+    left: 0;
+    top: 45px;
+    font-size: 1.25rem;
+    font-weight: normal;
+    opacity: 0.7;
+}
+
 
 /*
     -------------------------------
@@ -777,6 +794,8 @@ footer {
     text-align: left;
     box-shadow: 0px 1px 5px 0px #e2e2e2;
     transition: all 0.25s ease;
+    opacity: 0.5;
+    transform: scale(0.93);
     h3 {
         font-weight: 500;
         float: left;
@@ -805,11 +824,17 @@ footer {
         padding: 0 0 0 15px;
     }
     &:hover {
-        transform: scale(1.025);
+        opacity: 1;
+        transform: scale(1);
         box-shadow: 0px 1px 6px 0px #c5c5c5;
     }
 }
 
+.latest {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0px 1px 6px 0px #c5c5c5;
+}
 
 /*
     -------------------------------
@@ -884,7 +909,12 @@ footer {
 }
 
 .project {
-    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    align-content: start;
     max-width: 900px;
     margin: 0 auto 30px auto;
     overflow: hidden;
@@ -893,15 +923,12 @@ footer {
 }
 
 .project-image {
-    float: left;
+    flex:0;
 }
 
 .project-info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 300px;
-    padding: 15px;
+    flex: 1;
+    padding: 30px;
     h3 {
         font-size: 1.5em;
         font-weight: 300;
@@ -913,11 +940,6 @@ footer {
         margin: 0 0 15px 0;
         font-size: 0.9em;
     }
-}
-
-#project-github-link {
-    display: block;
-    margin-top:60px;
 }
 
 
@@ -966,49 +988,6 @@ footer {
             opacity: 1;
             transform: scale(1.125);
             color: black;
-        }
-    }
-}
-
-
-/*
-    -------------------------------
-    ----- 9.b Others Styles -----
-    -------------------------------
-*/
-
-#others {
-    padding: 80px 15px;
-    text-align: center;
-    h2 {
-        color: $heading;
-        margin-bottom: 50px;
-    }
-    .row {
-        max-width: 900px;
-        margin: auto;
-        .download-item {
-            color: #337ab7;
-            padding: 30px;
-            .icon {
-                margin: auto;
-                width: 133px;
-                height: 190px;
-                border-radius: 2px;
-                margin-bottom: 20px;
-                background-color: white;
-                box-shadow: 0px 1px 5px 0px #e2e2e2;
-                background-color: #f2f2f5;
-
-                .label {
-                    display: block;
-                    position: relative;
-                    bottom: -55px;
-                    left: 0px;
-                    font-size: 14pt;
-                    color: #353e51;
-                }
-            }
         }
     }
 }
@@ -1097,6 +1076,16 @@ footer {
         display: block;
         margin-left: 70px;
     }
+    .vtimeline-location {
+        width: auto;
+        text-align: left;
+        position: inherit;
+        margin-bottom: 25px;
+        display: block;
+        margin-left: 70px;
+        font-size: 1.4rem;
+        font-weight: normal;
+    }
     .vtimeline-icon {
         margin-left: 0;
     }
@@ -1182,8 +1171,7 @@ footer {
             }
         }
     }
-    #mobile-menu-open,
-    #mobile-menu-close {
+    #mobile-menu-close, #mobile-menu-open {
         display: block;
     }
     #menu {
@@ -1278,9 +1266,8 @@ footer {
                 font-size: 1.1em;
             }
             ul {
-                margin-left: -10px;
                 li:before {
-                    padding-left: 10px;
+                    //padding-left: 10px;
                 }
             }
         }
