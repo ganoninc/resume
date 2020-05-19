@@ -18,6 +18,7 @@ var sass = require('gulp-sass');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 var webserver = require('gulp-webserver');
+var imageResize = require('gulp-image-resize');
 
 function buildScriptsTask() {
     return src('js/scripts.js')
@@ -53,6 +54,15 @@ function watchStylesTask() {
     watch('scss/*.scss', series(buildStylesTask));
 }
 
+function buildExperienceThumbnailsTask() {
+    return src(['images/experience/**/*.png', 'images/experience/**/*.jpg'])
+    .pipe(imageResize({
+        width: 200,
+        height: 200
+    }))
+    .pipe(dest('images/experience-thumbnails/'));
+}
+
 function runWebserverTask() {
     return src('./')
         .pipe(webserver({
@@ -73,6 +83,7 @@ function runWebserverTask() {
 const launchLocalWebserver = series(
     buildScriptsTask, 
     buildStylesTask, 
+    buildExperienceThumbnailsTask,
     parallel(
         watchScriptsTask,
         watchStylesTask,
@@ -82,7 +93,8 @@ const launchLocalWebserver = series(
 
 const buildAssets = series(
     buildScriptsTask,
-    buildStylesTask
+    buildStylesTask,
+    buildExperienceThumbnailsTask
 );
 
 exports.default = launchLocalWebserver;
