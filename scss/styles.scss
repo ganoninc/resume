@@ -50,15 +50,15 @@ $heading: #374054;
 $text: #74808a;
 // n is number of stars required
 @function multiple-box-shadow ($n) {
-    $value: '#{random(2560)}px #{random(2560)}px #FFF';
+    $value: '#{random(3500)}px #{random(2000)}px #FFF';
     @for $i from 2 through $n {
-        $value: '#{$value} , #{random(2560)}px #{random(2560)}px #FFF';
+        $value: '#{$value} , #{random(3500)}px #{random(2000)}px #FFF';
     }
     @return unquote($value)
 }
 
-$shadows-small: multiple-box-shadow(1025);
-$shadows-medium: multiple-box-shadow(250);
+$shadows-small: multiple-box-shadow(1525);
+$shadows-medium: multiple-box-shadow(425);
 $shadows-big: multiple-box-shadow(125);
 // infinite: animations On
 // 0: animations off
@@ -410,14 +410,13 @@ footer {
     min-height: 500px;
     background-color: #0f2f45;
     background: radial-gradient(ellipse at center, #11405f 0%, #170101 100%);
-    padding: 15px;
     overflow: hidden;
     #stars {
         width: 1px;
         height: 1px;
         background: transparent;
         box-shadow: $shadows-small;
-        animation: animStar 50s linear $infinite-animation-switch;
+        animation: animStar 325s linear $infinite-animation-switch;
         &:after {
             content: " ";
             position: absolute;
@@ -433,7 +432,7 @@ footer {
         height: 2px;
         background: transparent;
         box-shadow: $shadows-medium;
-        animation: animStar 100s linear $infinite-animation-switch;
+        animation: animStar 175s linear $infinite-animation-switch;
         &:after {
             content: " ";
             position: absolute;
@@ -449,7 +448,7 @@ footer {
         height: 3px;
         background: transparent;
         box-shadow: $shadows-big;
-        animation: animStar 150s linear $infinite-animation-switch;
+        animation: animStar 75s linear $infinite-animation-switch;
         &:after {
             content: " ";
             position: absolute;
