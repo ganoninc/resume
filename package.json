@@ -30,6 +30,6 @@
     "url": "https://github.com/ganoninc/resume.git"
   },
   "dependencies": {
-    "npm": "^6.14.6"
+    "npm": "^7.20.3"
   }
 }
