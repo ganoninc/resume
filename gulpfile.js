@@ -14,7 +14,7 @@
 const { watch, parallel, series, src, dest } = require('gulp');
 var plumber = require('gulp-plumber');
 var uglify = require('gulp-uglify');
-var sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 var webserver = require('gulp-webserver');
