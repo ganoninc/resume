@@ -607,6 +607,7 @@ footer {
         display: block;
         margin: auto;
         margin-bottom: 50px;
+        border-radius: 100px;
     }
     h2 {
         color: $heading;
@@ -624,7 +625,7 @@ footer {
         display: block;
         margin: auto;
         max-width: 500px;
-        text-align: justify;
+        text-align: center;
         font-size: 1.2em;
         color: $text;
         line-height: 1.6em;
