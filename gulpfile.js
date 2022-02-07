@@ -19,6 +19,7 @@ var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 var webserver = require('gulp-webserver');
 var imageResize = require('gulp-image-resize');
+const image = require('gulp-image');
 
 function buildScriptsTask() {
     return src('js/scripts.js')
@@ -60,7 +61,13 @@ function buildExperienceThumbnailsTask() {
         width: 200,
         height: 200
     }))
-    .pipe(dest('images/experience-thumbnails/'));
+    .pipe(dest('build/images/experience-thumbnails/'));
+}
+
+function buildExperienceImagesTask() {
+    return src(['images/experience/**/*.png', 'images/experience/**/*.jpg', 'images/experience/**/*.JPG', 'images/experience/**/*.jpeg'])
+    .pipe(image())
+    .pipe(dest('build/images/experience/'));
 }
 
 function runWebserverTask() {
@@ -83,6 +90,7 @@ function runWebserverTask() {
 const launchLocalWebserver = series(
     buildScriptsTask, 
     buildStylesTask, 
+    buildExperienceImagesTask, 
     buildExperienceThumbnailsTask,
     parallel(
         watchScriptsTask,
@@ -94,6 +102,7 @@ const launchLocalWebserver = series(
 const buildAssets = series(
     buildScriptsTask,
     buildStylesTask,
+    buildExperienceImagesTask,
     buildExperienceThumbnailsTask
 );
 
