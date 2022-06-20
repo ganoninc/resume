@@ -1,14 +1,14 @@
 /*jshint esversion: 6 */
 
 /* 
-    Build the assets and can start a local webserver with live reload
+    Build the assets and start a local webserver if requested
 
-    gulp start  // start the webserver and reload automaticly when needed
+    gulp start  // start the webserver and refresh the page when a file is updated
     gulp build  // build the assets
 
     Author: Romain Giovanetti
 
-    Gulp 4.x is required
+    This scripts requires Gulp 4.x to work properly
 */
 
 const { watch, parallel, series, src, dest } = require('gulp');
@@ -20,6 +20,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var webserver = require('gulp-webserver');
 var imageResize = require('gulp-image-resize');
 const image = require('gulp-image');
+const stripCssComments = require('gulp-strip-css-comments');
 
 function buildScriptsTask() {
     return src('js/scripts.js')
@@ -48,6 +49,7 @@ function buildStylesTask() {
         })))
         .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(autoprefixer())
+        .pipe(stripCssComments())
         .pipe(dest('css'));
 }
 
@@ -61,6 +63,7 @@ function buildExperienceThumbnailsTask() {
         width: 200,
         height: 200
     }))
+    .pipe(image())
     .pipe(dest('build/images/experience-thumbnails/'));
 }
 
@@ -73,17 +76,18 @@ function buildExperienceImagesTask() {
 function runWebserverTask() {
     return src('./')
         .pipe(webserver({
-            livereload: true,
             directoryListing: true,
             open: 'http://localhost:8000/index.html',
-            enable: true, // need this set to true to enable livereload 
-            filter: function(fileName) {
-                if (fileName.match(/.scss$/)) {
-                    return false;
-                } else {
-                    return true;
+            livereload: {
+                enable: true, // need this set to true to enable livereload
+                filter: function(fileName) {
+                    if (fileName.match(/.scss$/)) {
+                        return false;
+                    } else {
+                        return true;
+                    }
                 }
-            }
+              }
         }));
 }
 
