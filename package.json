@@ -11,7 +11,8 @@
     "dev"
   ],
   "scripts": {
-    "start": "gulp start"
+    "start": "gulp start",
+    "build": "gulp build"
   },
   "author": "Romain Giovanetti",
   "license": "MIT",
