@@ -6,7 +6,7 @@ The Stars animation used in the header is from Saransh Sinha (@saransh - http://
 
 ## External dendencies
 
-* To build this resume, some external dependices are required for Gulp, see: https://www.npmjs.com/package/gulp-image
+-   To build this resume, some external dependices are required for Gulp, see: https://www.npmjs.com/package/gulp-image
 
 ## License
 

@@ -11,7 +11,6 @@
     Stars animation code found on CodePen.io (http://codepen.io/saransh/pen/BKJun), thanks to its creator.
 */
 
-
 /*
     File Contents:
 
@@ -28,7 +27,6 @@
         10. Contact Styles
         11. Media Queries
 */
-
 
 /*
     ------------------------
@@ -49,12 +47,12 @@ $border: #dcd9d9;
 $heading: #374054;
 $text: #74808a;
 // n is number of stars required
-@function multiple-box-shadow ($n) {
+@function multiple-box-shadow($n) {
     $value: '#{random(3500)}px #{random(2000)}px #FFF';
     @for $i from 2 through $n {
         $value: '#{$value} , #{random(3500)}px #{random(2000)}px #FFF';
     }
-    @return unquote($value)
+    @return unquote($value);
 }
 
 $shadows-small: multiple-box-shadow(1525);
@@ -91,7 +89,6 @@ $infinite-animation-switch: infinite;
     }
 }
 
-
 /*
     ----------------------------
     ----- 3. Global Styles -----
@@ -101,7 +98,7 @@ $infinite-animation-switch: infinite;
 body {
     font-family: 'Lato', sans-serif;
     font-size: 16px;
-    a{
+    a {
         color: $base-color;
     }
     &.active {
@@ -113,7 +110,7 @@ body {
 // No JS styles
 .no-js {
     #experience-timeline {
-        >div {
+        > div {
             background: $background;
             padding: 10px;
             margin-bottom: 10px;
@@ -158,7 +155,7 @@ header {
     -webkit-backdrop-filter: saturate(200%) blur(50px);
     backdrop-filter: saturate(180%) blur(50px);
     background-color: rgba(255, 255, 255, 0.85);
-    box-shadow: 0px 1px 25px rgba(0,0,0,0.25);
+    box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.25);
     top: -100px;
     transition: all 0.5s ease-out;
 
@@ -181,7 +178,7 @@ header {
         &:hover {
             color: $base-color-darker;
             text-decoration: none;
-            background:#dbf1ff;
+            background: #dbf1ff;
             border-radius: 4px;
         }
         &:focus {
@@ -193,7 +190,7 @@ header {
         a {
             color: $base-color-darker;
             text-decoration: none;
-            background:#dbf1ff;
+            background: #dbf1ff;
             border-radius: 4px;
         }
     }
@@ -208,7 +205,6 @@ header {
         z-index: 999;
     }
     &.visible {
-
         top: 0px;
     }
 }
@@ -341,7 +337,7 @@ footer {
 }
 
 .shadow {
-    box-shadow: 0px 1px 25px rgba(0,0,0,0.25);
+    box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.25);
 }
 
 .shadow-large {
@@ -371,7 +367,8 @@ footer {
     background: $background-alt;
 }
 
-.btn-download, .btn-show-more {
+.btn-download,
+.btn-show-more {
     background-color: white;
     display: inline-block;
     margin: auto;
@@ -386,14 +383,15 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
-.btn-download:hover, .btn-show-more:hover {
+.btn-download:hover,
+.btn-show-more:hover {
     color: #2471a5;
-    background-color: #eff8ff;;
+    background-color: #eff8ff;
     text-decoration: none; //background: #eee;
     border-radius: 4px;
 }
 
-.extra-link{
+.extra-link {
     margin-top: 75px;
     font-size: 1.75rem;
 }
@@ -417,7 +415,7 @@ footer {
         right: 0;
         text-align: center;
         opacity: 0.85;
-    
+
         ul {
             display: inline-block;
             text-align: center;
@@ -442,7 +440,8 @@ footer {
                     color: lighten($base-color, 25%);
                     text-decoration: none;
                 }
-                &:active, &:focus {
+                &:active,
+                &:focus {
                     color: white;
                     text-decoration: none;
                 }
@@ -456,7 +455,7 @@ footer {
         box-shadow: $shadows-small;
         animation: animStar 325s linear $infinite-animation-switch;
         &:after {
-            content: " ";
+            content: ' ';
             position: absolute;
             top: 2000px;
             width: 1px;
@@ -472,7 +471,7 @@ footer {
         box-shadow: $shadows-medium;
         animation: animStar 175s linear $infinite-animation-switch;
         &:after {
-            content: " ";
+            content: ' ';
             position: absolute;
             top: 2000px;
             width: 2px;
@@ -488,7 +487,7 @@ footer {
         box-shadow: $shadows-big;
         animation: animStar 75s linear $infinite-animation-switch;
         &:after {
-            content: " ";
+            content: ' ';
             position: absolute;
             top: 2000px;
             width: 3px;
@@ -577,7 +576,6 @@ footer {
         animation: pulsate 1.5s ease;
         animation-iteration-count: $infinite-animation-switch;
         padding-top: 5px;
-        ;
     }
 }
 
@@ -593,7 +591,6 @@ footer {
     }
 }
 
-
 /*
     ---------------------------
     ----- 5. About Styles -----
@@ -603,7 +600,7 @@ footer {
 #about {
     padding: 80px 15px;
     text-align: center;
-    .profile-picture{
+    .profile-picture {
         display: block;
         margin: auto;
         margin-bottom: 50px;
@@ -633,7 +630,6 @@ footer {
     }
 }
 
-
 /*
     --------------------------------
     ----- 6. Experience Styles -----
@@ -648,22 +644,19 @@ footer {
     }
 }
 
-.partially-hidden{
-    height: 1425px;
+.partially-hidden {
+    height: 1725px;
     overflow: hidden;
 }
 
-#show-more-experiences{
+#show-more-experiences {
     background-color: #f2f2f5;
-    background: linear-gradient(to top,
-         #f2f2f5 50%, 
-         rgba(255,255,255, 0) 100%
-    );
+    background: linear-gradient(to top, #f2f2f5 50%, rgba(255, 255, 255, 0) 100%);
     height: 250px;
     margin-top: -250px;
     position: relative;
     z-index: 100;
-    display: flex;  
+    display: flex;
     justify-content: center;
     align-items: flex-end;
     #show-more-experiences__button {
@@ -720,8 +713,8 @@ footer {
         color: #7e8890;
         margin: 0 0 0 0;
     }
-    strong{
-        color:#525252;
+    strong {
+        color: #525252;
     }
     p {
         color: $text;
@@ -738,12 +731,12 @@ footer {
         li {
             display: block;
             margin: 10px 0px;
-            padding-left:10px;
+            padding-left: 10px;
             font-size: 0.9em;
             line-height: 1.5em;
             color: $text;
             max-width: 430px;
-            text-align: justify;
+            text-align: left;
 
             .fa-li {
                 color: $base-color;
@@ -832,11 +825,10 @@ footer {
     position: absolute;
     left: 0;
     top: 45px;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     font-weight: normal;
     opacity: 0.7;
 }
-
 
 /*
     -------------------------------
@@ -958,7 +950,6 @@ footer {
     }
 }
 
-
 /*
     -------------------------------
     ----- 8b. Project Styles -----
@@ -989,7 +980,7 @@ footer {
 }
 
 .project-image {
-    flex:0;
+    flex: 0;
 }
 
 .project-info {
@@ -1007,7 +998,6 @@ footer {
         font-size: 0.9em;
     }
 }
-
 
 /*
     -------------------------------
@@ -1036,7 +1026,7 @@ footer {
         background: darken($background-alt, 5%);
         list-style: none;
         cursor: default;
-        font-size: 1.0em;
+        font-size: 1em;
         opacity: 0.9;
         transition: 0.25s;
         &.main-skill {
@@ -1049,7 +1039,7 @@ footer {
             padding: 3px 6px;
             opacity: 0.5;
         }
-        &.skill-hover-event{
+        &.skill-hover-event {
             background-color: $base-color-brighter;
             opacity: 1;
             transform: scale(1.125);
@@ -1057,7 +1047,6 @@ footer {
         }
     }
 }
-
 
 /*
     -------------------------------
@@ -1118,7 +1107,6 @@ footer {
         }
     }
 }
-
 
 /*
     ----------------------------
@@ -1240,7 +1228,8 @@ footer {
             }
         }
     }
-    #mobile-menu-close, #mobile-menu-open {
+    #mobile-menu-close,
+    #mobile-menu-open {
         display: block;
     }
     #menu {
@@ -1252,7 +1241,7 @@ footer {
         li {
             display: block;
             padding: 5px;
-            a{
+            a {
                 padding: 10px;
             }
         }
@@ -1287,8 +1276,8 @@ footer {
         p {
             text-align: left;
         }
-        ul{
-            li{
+        ul {
+            li {
                 text-align: left;
             }
         }
