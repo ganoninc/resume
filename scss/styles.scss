@@ -519,6 +519,7 @@ footer {
     h1,
     h2 {
         margin: 0;
+        margin-top: 3rem;
     }
     h1 {
         color: #fff;
@@ -593,40 +594,34 @@ footer {
 
 /*
     ---------------------------
-    ----- 5. About Styles -----
+    ----- 5. Profile Styles -----
     ---------------------------
 */
 
-#about {
+#profile {
     padding: 80px 15px;
     text-align: center;
     .profile-picture {
         display: block;
         margin: auto;
-        margin-bottom: 50px;
+        margin-top: 30px;
+        margin-bottom: 4em;
         border-radius: 100px;
-    }
-    h2 {
-        color: $heading;
-        max-width: 600px;
-        font-size: 2.2em;
-        margin-bottom: 60px;
-        .highlight {
-            color: $base-color;
-        }
-    }
-    .heading:after {
-        content: none;
     }
     p {
         display: block;
         margin: auto;
-        max-width: 500px;
-        text-align: center;
+        max-width: 600px;
+        text-align: left;
         font-size: 1.2em;
         color: $text;
         line-height: 1.6em;
         font-weight: lighter;
+        margin-bottom: 1.2em;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
     }
 }
 

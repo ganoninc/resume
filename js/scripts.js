@@ -118,7 +118,7 @@
 
     $(window).scroll(function () {
         //Au scroll dans la fenetre on déclenche la fonction
-        if ($(this).scrollTop() > $('#lead').height() + $('#about').height() - 25) {
+        if ($(this).scrollTop() > 50) {
             $('.stars').addClass('animation-disabled')
             $('header').addClass('visible')
             $('#mobile-menu-open').addClass('visible')
