@@ -692,25 +692,29 @@ footer {
 .vtimeline-content {
     margin-left: 350px;
     background: #fff;
-    padding: 40px 40px;
+    padding: 2.5em;
     text-align: left;
     box-shadow: 0px 1px 5px 0px #e2e2e2;
     h3 {
-        font-size: 1.5em;
+        font-size: 1.2em;
         font-weight: 300;
         color: $heading;
         display: inline-block;
         margin: 0;
+        margin-bottom: 0.5em;
     }
     h4 {
         font-size: 1.2em;
         font-weight: 300;
         color: #7e8890;
         margin: 0 0 0 0;
+        margin-bottom: 0.5em;
     }
     h5 {
         font-size: 1em;
         font-weight: 300;
+        margin: 0 0 0 0;
+        margin-top: 1em;
     }
     strong {
         color: #525252;
@@ -724,22 +728,30 @@ footer {
         text-align: left;
     }
     ul {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        margin-left: 22px;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        margin-left: 25px;
         li {
             display: block;
-            margin: 10px 0px;
+            margin: 0.5em 0px;
             padding-left: 10px;
             font-size: 0.9em;
-            line-height: 1.5em;
+            line-height: 1.6em;
             color: $text;
             max-width: 430px;
             text-align: left;
 
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
             .fa-li {
                 color: $base-color;
             }
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
         }
     }
     .experience-illustrations {
@@ -788,7 +800,7 @@ footer {
     position: relative;
     display: block;
     vertical-align: top;
-    margin-bottom: 30px;
+    margin-bottom: 4em;
 }
 
 .vtimeline-icon {
@@ -816,6 +828,7 @@ footer {
     top: 10px;
     font-weight: 300;
     color: #374054;
+    font-size: 1.1em;
 }
 
 .vtimeline-location {
@@ -824,7 +837,7 @@ footer {
     position: absolute;
     left: 0;
     top: 45px;
-    font-size: 1.35rem;
+    font-size: 1em;
     font-weight: normal;
     opacity: 0.7;
 }
