@@ -714,7 +714,7 @@ footer {
         font-size: 1em;
         font-weight: 300;
         margin: 0 0 0 0;
-        margin-top: 1em;
+        margin-top: 1.3em;
     }
     strong {
         color: #525252;
@@ -728,8 +728,8 @@ footer {
         text-align: left;
     }
     ul {
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
+        margin-top: 0.9em;
+        margin-bottom: 0.7em;
         margin-left: 25px;
         li {
             display: block;
@@ -743,10 +743,6 @@ footer {
 
             &:last-of-type {
                 margin-bottom: 0;
-            }
-
-            .fa-li {
-                color: $base-color;
             }
         }
 
