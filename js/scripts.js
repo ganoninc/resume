@@ -25,7 +25,7 @@
             {
                 scrollTop: scrollDistance + 'px',
             },
-            1250,
+            500,
         )
 
         // Hide the menu once clicked if mobile
@@ -45,7 +45,7 @@
             {
                 scrollTop: scrollDistance + 'px',
             },
-            1250,
+            500,
         )
     })
 
@@ -55,7 +55,7 @@
             {
                 scrollTop: 0,
             },
-            1250,
+            500,
         )
     })
 
@@ -66,7 +66,7 @@
             {
                 scrollTop: scrollDistance + 'px',
             },
-            1250,
+            500,
         )
     })
 
@@ -119,9 +119,10 @@
     $(window).scroll(function () {
         //Au scroll dans la fenetre on déclenche la fonction
         if ($(this).scrollTop() > 50) {
-            $('.stars').addClass('animation-disabled')
             $('header').addClass('visible')
             $('#mobile-menu-open').addClass('visible')
+        } else if ($(this).scrollTop() > $('#lead').height() + $('#about').height() - 25) {
+            $('.stars').addClass('animation-disabled')
         } else {
             $('.stars').removeClass('animation-disabled')
             $('header').removeClass('visible')
