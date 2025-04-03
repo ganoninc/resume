@@ -377,7 +377,7 @@ footer {
     margin-top: 30px;
     border: 1px solid;
     border-radius: 10px;
-    color: #3498db;
+    color: $base-color;
     padding: 10px;
     transition-property: all;
     transition-duration: 0.25s;
@@ -1059,6 +1059,47 @@ footer {
             opacity: 1;
             transform: scale(1.125);
             color: black;
+        }
+    }
+}
+
+/*
+    -------------------------------
+    ----- Links Styles -----
+    -------------------------------
+*/
+
+#links {
+    padding: 80px 15px;
+    text-align: center;
+    h2 {
+        color: $heading;
+        margin-bottom: 50px;
+    }
+}
+
+.link-container {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center them horizontally */
+    gap: 1em; /* Add some space between links */
+
+    .link {
+        display: grid;
+        grid-template-columns: auto 1fr; /* Icon and text */
+        align-items: center; /* Align icon and text vertically */
+        text-decoration: none;
+        padding: 12px 17px;
+        border-radius: 8px;
+        background-color: #f2f2f5;
+        // color: black;
+        width: max-content; /* Ensure all links take the width of the widest */
+        min-width: max-content;
+        font-size: 1.2em;
+
+        .icon {
+            margin-right: 10px; /* Space between icon and text */
+            font-size: 1.25em;
         }
     }
 }
