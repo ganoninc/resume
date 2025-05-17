@@ -30,7 +30,7 @@
         <link rel="stylesheet" href="css/tippy.css" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://kit.fontawesome.com/f4bee6425e.js" crossorigin="anonymous"></script>
-        <link rel="apple-touch-icon" href="%./apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
         <link rel="icon" href="./favicon.ico" />
     </head>
 
@@ -45,28 +45,28 @@
             </div>
             <ul id="menu" class="nav">
                 <li>
-                    <a id="link-profile" href="#profile">Profile</a>
+                    <a id="mobile-menu-link-profile" href="#profile">Profile</a>
                 </li>
                 <li>
-                    <a id="link-skills" href="#skills">Skills</a>
+                    <a id="mobile-menu-link-skills" href="#skills">Skills</a>
                 </li>
                 <li>
-                    <a id="link-experience" href="#experience">Experience</a>
+                    <a id="mobile-menu-link-experience" href="#experience">Experience</a>
                 </li>
                 <li>
-                    <a id="link-projects" href="#projects">Personal Projects</a>
+                    <a id="mobile-menu-link-projects" href="#projects">Personal Projects</a>
                 </li>
                 <li>
-                    <a id="link-education" href="#education">Education</a>
+                    <a id="mobile-menu-link-education" href="#education">Education</a>
                 </li>
                 <li>
-                    <a id="link-publications" href="#publications">Publications</a>
+                    <a id="mobile-menu-link-publications" href="#publications">Publications</a>
                 </li>
                 <li>
-                    <a id="link-links" href="#links">Links</a>
+                    <a id="mobile-menu-link-links" href="#links">Links</a>
                 </li>
                 <li>
-                    <a id="link-contact" href="#contact">Contact</a>
+                    <a id="mobile-menu-link-contact" href="#contact">Contact</a>
                 </li>
             </ul>
         </header>
@@ -76,28 +76,28 @@
             <div id="lead-menu">
                 <ul class="nav">
                     <li>
-                        <a id="link-profile" href="#profile">Profile</a>
+                        <a id="lead-menu-link-profile" href="#profile">Profile</a>
                     </li>
                     <li>
-                        <a id="link-skills" href="#skills">Skills</a>
+                        <a id="lead-menu-link-skills" href="#skills">Skills</a>
                     </li>
                     <li>
-                        <a id="link-experience" href="#experience">Experience</a>
+                        <a id="lead-menu-link-experience" href="#experience">Experience</a>
                     </li>
                     <li>
-                        <a id="link-projects" href="#projects">Personal Projects</a>
+                        <a id="lead-menu-link-projects" href="#projects">Personal Projects</a>
                     </li>
                     <li>
-                        <a id="link-education" href="#education">Education</a>
+                        <a id="lead-menu-link-education" href="#education">Education</a>
                     </li>
                     <li>
-                        <a id="link-publications" href="#publications">Publications</a>
+                        <a id="lead-menu-link-publications" href="#publications">Publications</a>
                     </li>
                     <li>
-                        <a id="link-links" href="#links">Links</a>
+                        <a id="lead-menu-link-links" href="#links">Links</a>
                     </li>
                     <li>
-                        <a id="link-contact" href="#contact">Contact</a>
+                        <a id="lead-menu-link-contact" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -272,11 +272,22 @@
                             <strong>up to 75% (from 1200ms to 300ms)</strong>.
                         </li>
                         <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>Overhauled email
-                            management system with
-                            <strong>enhanced security protocols and email signing</strong>, reducing
-                            email rejection rates by <strong>80%</strong> and
-                            improving deliverability.
+                            <span class="fa-li"><i class="fas fa-check"></i></span>Redesigned the
+                            email management system with
+                            <strong
+                                >improved security protocols and email signing (SPF, DKIM,
+                                DMARC)</strong
+                            >, reducing rejection rates by <strong>80%</strong> and significantly
+                            increasing deliverability.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span
+                            ><strong>Decoupled email processing</strong> using Symfony Messenger
+                            with <strong>message dispatching</strong>,
+                            <strong>partial asynchronous handling</strong>, and custom retry queues.
+                            Built <strong>custom handlers</strong> to ensure reliable delivery
+                            despite constraints of OVH’s shared hosting (Apache + PHP, no native
+                            background workers).
                         </li>
                     </ul>
                     <h5>
@@ -1026,7 +1037,12 @@
                 <div class="row">
                     <div class="project">
                         <div class="project-image">
-                            <img width="300" height="300" src="images/project-sjcshs.jpg" />
+                            <img
+                                width="300"
+                                height="300"
+                                src="images/project-sjcshs.jpg"
+                                alt="SJCSHS logo"
+                            />
                         </div>
                         <!-- End .project-image -->
                         <div class="project-info">
@@ -1045,7 +1061,12 @@
                     </div>
                     <div class="project">
                         <div class="project-image">
-                            <img width="300" height="300" src="images/project-flowtos.jpg" />
+                            <img
+                                width="300"
+                                height="300"
+                                src="images/project-flowtos.jpg"
+                                alt="Flowtos logo"
+                            />
                         </div>
                         <!-- End .project-image -->
                         <div class="project-info">
@@ -1069,7 +1090,12 @@
                     <!-- End .project -->
                     <div class="project">
                         <div class="project-image">
-                            <img width="300" height="300" src="images/project-blog-vie-usa.jpg" />
+                            <img
+                                width="300"
+                                height="300"
+                                src="images/project-blog-vie-usa.jpg"
+                                alt="Blog VIE-USA illustration"
+                            />
                         </div>
                         <!-- End .project-image -->
                         <div class="project-info">
@@ -1093,7 +1119,12 @@
                     <!-- End .project -->
                     <div class="project">
                         <div class="project-image">
-                            <img width="300" height="300" src="images/project-winerror.jpg" />
+                            <img
+                                width="300"
+                                height="300"
+                                src="images/project-winerror.jpg"
+                                alt="Windows XP Error Simulator illustration"
+                            />
                         </div>
                         <!-- End .project-image -->
                         <div class="project-info">
@@ -1120,6 +1151,7 @@
                                 width="300"
                                 height="300"
                                 src="images/project-emoji-weather-map.jpg"
+                                alt="Emoji Weather Map illustration"
                             />
                         </div>
                         <!-- End .project-image -->
@@ -1147,6 +1179,7 @@
                                 width="300"
                                 height="300"
                                 src="images/trident-kloader-updated.jpg"
+                                alt="Trident Kloader Updated illustration"
                             />
                         </div>
                         <!-- End .project-image -->
@@ -1277,32 +1310,34 @@
 
         <div id="links" class="background">
             <h2 class="heading">Links</h2>
-                <div class="link-container">
-                    <a 
+            <div class="link-container">
+                <a
                     class="link"
                     onclick="ga('send', 'event', 'External Link', 'Open', 'Github');"
                     href="https://github.com/ganoninc/"
-                    target="_blank">
-                        <div class="icon"><i class="fab fa-github"></i></div>
-                        <div class="label"><strong>Github</strong> .com / ganoninc</div>
-                    </a>
-                    <a 
+                    target="_blank"
+                >
+                    <div class="icon"><i class="fab fa-github"></i></div>
+                    <div class="label"><strong>Github</strong> .com / ganoninc</div>
+                </a>
+                <a
                     class="link"
                     onclick="ga('send', 'event', 'External Link', 'Open', 'LinkedIn');"
                     href="https://www.linkedin.com/in/romainjg"
-                    target="_blank">
-                        <div class="icon"><i class="fab fa-linkedin"></i></div>
-                        <div class="label"><strong>LinkedIn</strong> .com / romainjg</div>
-                    </a>
-                    <a 
+                    target="_blank"
+                >
+                    <div class="icon"><i class="fab fa-linkedin"></i></div>
+                    <div class="label"><strong>LinkedIn</strong> .com / romainjg</div>
+                </a>
+                <a
                     class="link"
                     onclick="ga('send', 'event', 'External Link', 'Open', 'Leetcode');"
                     href="https://leetcode.com/u/RomainJG/"
-                    target="_blank">
-                        <div class="icon"><i class="fas fa-code"></i></div>
-                        <div class="label"><strong>LeetCode</strong> .com / RomainJG</div>
-                    </a>
-                </div>
+                    target="_blank"
+                >
+                    <div class="icon"><i class="fas fa-code"></i></div>
+                    <div class="label"><strong>LeetCode</strong> .com / RomainJG</div>
+                </a>
             </div>
         </div>
         <!-- End #links -->
