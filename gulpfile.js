@@ -97,7 +97,7 @@ function runWebserverTask() {
     return src('./').pipe(
         webserver({
             directoryListing: true,
-            open: 'http://localhost:8000/index.html',
+            host: '0.0.0.0',
             livereload: {
                 enable: true, // need this set to true to enable livereload
                 filter: function (fileName) {
