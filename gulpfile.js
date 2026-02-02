@@ -98,6 +98,7 @@ function runWebserverTask() {
         webserver({
             directoryListing: true,
             host: '0.0.0.0',
+            port: 8000,
             livereload: {
                 enable: true, // need this set to true to enable livereload
                 filter: function (fileName) {

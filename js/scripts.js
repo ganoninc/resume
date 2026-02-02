@@ -190,4 +190,13 @@
             $('.skill-java-type').removeClass('skill-hover-event')
         },
     )
+
+    $('.skill-infra-type').hover(
+        function () {
+            $('.skill-infra-type').addClass('skill-hover-event')
+        },
+        function () {
+            $('.skill-infra-type').removeClass('skill-hover-event')
+        },
+    )
 })(jQuery)
