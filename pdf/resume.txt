@@ -1,0 +1,103 @@
+Romain J. Giovanetti
+
+Senior Full-Stack Engineer with 13 years of international experience building user-centric web applications.
+Focused on clean code, performance, and scalable system design across monolithic architectures and cloud-native microservices.
+Strong problem-solving mindset, quickly identifying issues and delivering effective solutions that improve both system performance and user experience.
+
+Experience
+
+Senior Full-Stack Engineer at Self-Employed
+Oct. 2023 - Today, Saint-Memmie, France
+Customer: La Maison De L'Eleveur
+- Enhanced front-end performance, accessibility (ARIA, semantic HTML, contrast), and user experience, improving engagement and navigation, and increasing Lighthouse score from 83 to 99 (LCP 0.9s, FCP 0.4s, TBT 0ms, CLS 0).
+- Upgraded backend dependencies and refactored core architecture; introduced a reverse proxy, improving scalability and maintainability and reducing page load time from 1200ms to 70ms (-94%).
+- Designed an automated weekly reporting system covering the full sales funnel (traffic, RFQs, orders, revenue, margins), enabling faster decision- making and eliminating manual reporting.
+- Standardized shopping cart APIs using REST principles and enforced per-IP and per-session rate-limiting policies (token bucket), improving resilience, preventing abusive traffic, and stabilizing performance during peak usage.
+- Implemented an asynchronous, event-driven quote processing workflow using Symfony Messenger, decoupling PDF generation and email delivery via chained message handlers.
+- Consolidated and improved the email delivery system by implementing SPF, DKIM, and DMARC, and refactoring processing into an asynchronous pipeline with retry mechanisms, reducing rejection rates by 80% and improving reliability.
+Customer: Champagne Carole Haudot
+- Developed a custom configuration interface, transforming a previously static website into a more dynamic and manageable platform.
+Customer: Saint Joseph College of Maasin, Leyte, Philippines
+- Took over and revamped an unfinished grading application, originally developed by a student, addressing critical security flaws, extensive bugs, and unstable code . Refactored key components, implemented new features, and continue to enhance its functionality and security.
+
+Software Engineer (Frontend) at Canva
+May 2023 - Sep. 2023, Melbourne, Australia
+- Implemented infinite scroll on the user activity log page of a specialized internal web app, enabling troubleshooting specialists to access unlimited historical data. Optimized data fetching by handling microservices with and without pagination support, using React, andMobX MobX.
+- Designed and developed a dynamic theme module to enable seamless integration of seasonal and event-based decorations (e.g., April Fool’s, Christmas) into the web application.
+- Refactored the codebase , replacing deprecated components and services, and migrating internal API calls and components to their latest versions, resulting in improved stability, maintainability, and performance .
+- Increased test coverage by implementing comprehensive unit tests for previously untested component presenters
+- Contributed to shaping an 18-month strategy to mitigate linear cost escalation due to user growth by leveraging machine learning, OpenAI language models, and usability enhancements for specialist tools.
+
+Senior Full-Stack Engineer at Self-Employed
+Dec. 2019 - Apr. 2023, Saint Memmie, France
+Customer: La Maison De L’Eleveur
+- Developed an automated quote generation system handling 39 different templates using Dompdf, enabling seamless creation and delivery of PDF quotes to customers. This freed up the workload of 2.5 team members, allowing them to focus on higher-value tasks.
+- Initially built 8 custom product assistants using vanilla JS , allowing customers to easily order products like custom-cut metal sheets, pre-assembled kit doors for agricultural buildings , and gutters on the website. Later, rewrote one assistant using React and TypeScript for improved performance and scalability.
+- Designed and implemented dynamic pricing modules , calculating product prices based on multiple factors, including custom specifications and quantity/length.
+- Developed a custom order management system , allowing quotes to be converted into orders using a temporary token.
+- Introduced full responsiveness to the front-end, tweaked the UI for touchscreens, and optimized the website for tablets and smartphones, enhancing the mobile experience.
+- Developed a tracking module that monitors unfinished orders at each step. If a customer abandons an order, a commercial representative is alerted to follow up via call or email.
+- Enhanced website reliability by adding comprehensive test classes to prevent regressions.
+- Refactored and upgraded the website from Symfony 3 to Symfony 4, improving performance, security, and maintainability .
+Customer: Champagne Carole Haudot
+- Designed and built a modern website featuring a simple online shop, leveraging React and React Redux for a smooth user experience.
+
+Software Developer at Coface North America
+May 2018 - Nov. 2019, Princeton, NJ, USA
+- Maintained and enhanced policy management and collection back-office support applications, working with Java EE (Servlets, JSP) and Oracle PL/SQL.
+- Contributed to solution architecture and design, optimizing system interactions and database queries for better performance.
+- Designed and developed interfaces to facilitate seamless communication between different software applications.
+- Developed a debugging tool for PDF generation , allowing the team to bypass the manual multi-step policy creation process by directly passing XML documents for PDF output. This significantly reduced debugging time and improved efficiency .
+- Maintained and updated the development team wiki , ensuring accurate and up-to-date documentation.
+- Refactored and maintained legacy code , improving maintainability and performance where possible.
+- Strengthened application security following a penetration test, implementing a password encryption upgrade and a complete rework of the “Forgot Password” process , reinforcing security across the main application and related services.
+
+Full-Stack Engineer at Self-Employed
+Sep. 2017 - Apr. 2018, Saint Memmie, France
+Customer: La Maison De L’Eleveur
+- Migrated the codebase from Symfony 2 to Symfony 3, refactored legacy code, and resolved compatibility issues, enhancing security and maintainability.
+- Developed and optimized new website features using Symfony, MySQL, Bootstrap, and jQuery, enhancing user experience and streamlining online transactions.
+- Assisted in setting up a secondary e-commerce website for the company’s garden and home supply retail store . Created a fork of the existing platform and ensured a smooth technical foundation, allowing the client’s team to take over its development.
+
+Research & Development Engineer at CNRS / University of Lille / CRIStAL Lab
+Oct. 2014 - Aug. 2017, Lille, France
+- Published two papers in the IEEE International Conference on Advances in Social Network Analysis and Mining (ASONAM) 2016 .
+- Designed, built, and maintained a distributed platform capable of collecting and processing up to 2 million tweets per day, with a 2-year full data retention policy, powered by Elasticsearch and TensorFlow .
+- Developed secured internal APIs for remote control of the distributed platform and efficient data retrieval, implementing JSON Web Token (JWT) authentication.
+- Built an interactive and user-friendly dashboard to visualize processed data for third-party users, using an asynchronous stack with AngularJS, Node.js, and Express.js , with JWT-based authentication for secure access.
+- Researched and developed software prototypes for sentiment analysis, gender detection, and geolocation extraction from tweets , using simple algorithms and recursive neural networks.
+
+Full-Stack Engineer at La Maison De L’Eleveur
+Jun. 2014 - Sep. 2014, Vouziers, France
+- Built a fully custom e-commerce website to replace their previous WordPress-based solution, which had excessive, unnecessary options. The new system provided a streamlined, easy-to-use configuration panel tailored to their specific needs.
+- Designed the UI in Sketch, exploring three different design approaches—skeuomorphism, abstract, and a hybrid of both —before implementing the final version.
+- Rebuilt the entire website from scratch in just 3 months, using Symfony 2, MySQL, Bootstrap, and jQuery , improving performance, maintainability, and flexibility.
+- Revamped the online product catalog (1,500+ references) and introduced an intuitive UI for configuring custom-tailored steel sheets , reducing the number of page loads needed to reach a product from 10 to just 3, significantly improving user experience.
+
+Research & Development Engineer at CNRS / University of Lille / CRIStAL Lab
+Mar. 2013 - Feb. 2014, Lille, France
+- Designed and built custom-made bracelets that communicated with each other using Arduino Nano, Xbee modules, RFID chips, and other components , enabling interactive experiences.
+- Developed custom contactless quiz terminals using Arduino Mega, Ethernet shields, and RFID shields , enhancing user engagement and interactivity.
+- Created a central control system using Java and MongoDB to remotely manage, configure, and log usage of the custom devices.
+- Built a data visualization dashboard with Node.js, Express, and MongoDB , allowing stakeholders to filter and interpret usage data in a meaningful way.
+- Deployed and maintained the custom devices and control system at the Museum of Fine Arts in Tourcoing, France , and conducted user experience evaluations to assess performance and gather feedback.
+
+Education
+Master’s in Computer Science, University of Lille, France (2013)
+Bachelor’s in Computer Science, University of Lille, France (2011)
+DUT Informatique, University of Reims Champagne-Ardenne (2010)
+
+Skills
+Front-End: React.js, Redux, TypeScript, Storybook, SASS, MobX
+Back-End: Node.js, Express, Java EE/Spring Boot, Symfony, REST APIs
+Databases: MySQL, MongoDB, Oracle PL/SQL, Elasticsearch
+DevOps & Cloud: Docker, Git, AWS
+Testing: Jest, PHPUnit, JUnit
+Languages: French (native), English (C1)
+Soft Skills: Problem Solving, Architecture, Code Quality, Cloud, Security
+
+Links
+Portfolio: https://www.giovanetti.fr
+GitHub: https://www.github.com/ganoninc
+LinkedIn: https://www.linkedin.com/in/romainjg
+LeetCode: https://www.leetcode.com/romainjg
