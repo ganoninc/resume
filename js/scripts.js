@@ -36,7 +36,6 @@
 
     // Animate to section when nav is clicked
     $('#lead-menu a').click(function (e) {
-        console.log('test')
         e.preventDefault()
         var heading = $(this).attr('href')
         var scrollDistance = $(heading).offset().top
@@ -72,8 +71,8 @@
 
     // Create timeline
     $('#experience-timeline').each(function () {
-        $this = $(this) // Store reference to this
-        $userContent = $this.children('div') // user content
+        const $this = $(this) // Store reference to this
+        const $userContent = $this.children('div') // user content
 
         // Create each timeline block
         $userContent.each(function () {

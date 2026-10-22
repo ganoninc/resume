@@ -1,3 +1,7 @@
+@use 'sass:color';
+@use 'sass:math';
+@use 'sass:string';
+
 /*
     Title: Resume of Romain Giovanetti, based on a fork of Dev Portfolio Template by Ryan Fitzgerald
     Original Author: Ryan Fitzgerald, Fork by Romain Giovanetti (Ganoninc)
@@ -36,8 +40,8 @@
 
 // Define base and accent colors
 $base-color: #3498db;
-$base-color-darker: darken($base-color, 20%);
-$base-color-brighter: lighten($base-color, 25%);
+$base-color-darker: color.adjust($base-color, $lightness: -20%);
+$base-color-brighter: color.adjust($base-color, $lightness: 25%);
 // Define background colors
 $background: #fff;
 $background-alt: #f2f2f5;
@@ -48,11 +52,11 @@ $heading: #374054;
 $text: #74808a;
 // n is number of stars required
 @function multiple-box-shadow($n) {
-    $value: '#{random(3500)}px #{random(2000)}px #FFF';
+    $value: '#{math.random(3500)}px #{math.random(2000)}px #FFF';
     @for $i from 2 through $n {
-        $value: '#{$value} , #{random(3500)}px #{random(2000)}px #FFF';
+        $value: '#{$value} , #{math.random(3500)}px #{math.random(2000)}px #FFF';
     }
-    @return unquote($value);
+    @return string.unquote($value);
 }
 
 $shadows-small: multiple-box-shadow(1525);
@@ -277,7 +281,7 @@ footer {
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        border: 3px solid lighten($text, 25%);
+        border: 3px solid color.adjust($text, $lightness: 25%);
         text-align: center;
     }
     i {
@@ -435,11 +439,11 @@ footer {
                 color: white;
                 margin: 15px;
                 &:hover {
-                    color: lighten($base-color, 25%);
+                    color: color.adjust($base-color, $lightness: 25%);
                     text-decoration: none;
                 }
                 &:focus {
-                    color: lighten($base-color, 25%);
+                    color: color.adjust($base-color, $lightness: 25%);
                     text-decoration: none;
                 }
                 &:active,
@@ -532,7 +536,7 @@ footer {
         line-height: 0.9em;
     }
     h2 {
-        color: lighten($base-color, 25%);
+        color: color.adjust($base-color, $lightness: 25%);
         font-weight: 500;
         font-size: 2.25em;
         margin-bottom: 15px;
@@ -597,7 +601,7 @@ footer {
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        border: 3px solid lighten($base-color, 25%);
+        border: 3px solid color.adjust($base-color, $lightness: 25%);
         text-align: center;
     }
     i {
@@ -1063,7 +1067,7 @@ footer {
         margin: 7px;
         padding: 6px 12px;
         color: $heading;
-        background: darken($background-alt, 5%);
+        background: color.adjust($background-alt, $lightness: -5%);
         list-style: none;
         cursor: default;
         font-size: 1em;
@@ -1157,7 +1161,7 @@ footer {
         border-radius: 4px;
         border: none;
         margin-bottom: 10px;
-        background: darken($base-color, 15%);
+        background: color.adjust($base-color, $lightness: -15%);
         color: #fff;
         @include transition();
         @include placeholder {
@@ -1165,7 +1169,7 @@ footer {
         }
         &:focus {
             outline: none;
-            background: darken($base-color, 25%);
+            background: color.adjust($base-color, $lightness: -25%);
         }
     }
     textarea {
