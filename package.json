@@ -1,7 +1,7 @@
 {
     "name": "devportfolio-template",
     "version": "2.0.0",
-    "description": "My resume, based on the original work of Ryan Fitzgerald",
+    "description": "A personal resume website inspired by the original work of Ryan Fitzgerald.",
     "keywords": [
         "portfolio",
         "personal",
@@ -21,11 +21,11 @@
     "packageManager": "pnpm@11.24.0",
     "devDependencies": {
         "sass": "^1.93.2",
-        "vite": "^7.1.12"
+        "vite": "^7.1.12",
+        "vite-plugin-gh-pages": "^1.0.1"
     },
     "repository": {
         "type": "git",
         "url": "https://github.com/ganoninc/resume.git"
-    },
-    "dependencies": {}
+    }
 }
