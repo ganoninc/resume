@@ -542,6 +542,31 @@ footer {
         font-weight: normal;
         line-height: 1.8em;
     }
+    .open-to-work-badge{
+        color: #78f77f;
+        padding: 10px 15px;
+        display: flex;
+        gap: 7px;
+        justify-content: center;
+        margin-top: 2rem;
+        font-size: 1.1em;
+
+        @keyframes dot-animation {
+            from {
+                opacity: 0.3;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+        .animated-dot {
+            animation-name: dot-animation;
+            animation-duration: 1.25s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+    }
 }
 
 #lead-overlay {
